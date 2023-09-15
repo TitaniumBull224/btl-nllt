@@ -11,9 +11,9 @@ else:
 
 def serializedATN():
     with StringIO() as buf:
-        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\7")
+        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\f")
         buf.write("\b\4\2\t\2\3\2\3\2\3\2\3\2\2\2\3\2\2\2\2\6\2\4\3\2\2\2")
-        buf.write("\4\5\7\3\2\2\5\6\7\2\2\3\6\3\3\2\2\2\2")
+        buf.write("\4\5\7\f\2\2\5\6\7\2\2\3\6\3\3\2\2\2\2")
         return buf.getvalue()
 
 
@@ -29,19 +29,25 @@ class CSlangParser ( Parser ):
 
     literalNames = [  ]
 
-    symbolicNames = [ "<INVALID>", "ID", "WS", "ERROR_CHAR", "UNCLOSE_STRING", 
-                      "ILLEGAL_ESCAPE" ]
+    symbolicNames = [ "<INVALID>", "WS", "BLOCK_COMMENT", "LINE_COMMENT", 
+                      "ID", "AT_ID", "KEYWORD", "ERROR_CHAR", "UNCLOSE_STRING", 
+                      "ILLEGAL_ESCAPE", "CHAR" ]
 
     RULE_program = 0
 
     ruleNames =  [ "program" ]
 
     EOF = Token.EOF
-    ID=1
-    WS=2
-    ERROR_CHAR=3
-    UNCLOSE_STRING=4
-    ILLEGAL_ESCAPE=5
+    WS=1
+    BLOCK_COMMENT=2
+    LINE_COMMENT=3
+    ID=4
+    AT_ID=5
+    KEYWORD=6
+    ERROR_CHAR=7
+    UNCLOSE_STRING=8
+    ILLEGAL_ESCAPE=9
+    CHAR=10
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -59,8 +65,8 @@ class CSlangParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def ID(self):
-            return self.getToken(CSlangParser.ID, 0)
+        def CHAR(self):
+            return self.getToken(CSlangParser.CHAR, 0)
 
         def EOF(self):
             return self.getToken(CSlangParser.EOF, 0)
@@ -84,7 +90,7 @@ class CSlangParser ( Parser ):
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 2
-            self.match(CSlangParser.ID)
+            self.match(CSlangParser.CHAR)
             self.state = 3
             self.match(CSlangParser.EOF)
         except RecognitionException as re:
