@@ -1,0 +1,4 @@
+class Program {
+            // whatisthis	\q\e\p'"fq
+            var a: int = "hello";
+        }

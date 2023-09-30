@@ -1,0 +1,10 @@
+class Program {
+            var a: int = 5;
+            func @decrement():void {
+                self.a := self.a - 1;
+            }
+            func @main():int {
+                @decrement();
+                return self.a;
+            }
+        }

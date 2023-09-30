@@ -2,5 +2,9 @@
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter"
   },
-  "python.formatting.provider": "none"
+  "python.formatting.provider": "none",
+  "python.analysis.extraPaths": [
+    "./assignment1/src/main/CSlang/parser",
+    "./assignment1/src/test"
+  ]
 }
