@@ -27,12 +27,13 @@ Parser rules
 	classtyp: NEW ID LPN RPN;
 // Method declaration
 	method
-		: FUNC identifiers LPN (paramlist | ) RPN COL (typ | VOID) stmtblock 
-		| FUNC CONSTRUCTOR LPN (paramlist | ) RPN stmtblock
+		: FUNC identifiers LPN (paramlist | ) RPN COL (typ | VOID) blockstmt 
+		| FUNC CONSTRUCTOR LPN (paramlist | ) RPN blockstmt
 		;
 	paramlist: params CM paramlist | params COL typ;
 	params: ID CM params | ID;
-	stmtblock: LBR statements RBR;
+	blockstmt: LBR statements RBR;
+	parenexpr: LPN expressions RPN;
 // Expressions
 	expressions: exprprime | ;
 	exprprime: exprstr CM expressions | exprstr;
@@ -45,34 +46,46 @@ Parser rules
 	exprnot: NEG exprnot | exprsign;
 	exprsign: MINUS exprsign | exprindex;
 	exprindex: exprinst LBK exprstr RBK | exprinst;
-
-	exprinst: exprinst DOT ID (LPN expressions RPN | ) | exprstat;
-	exprstat: ((ID | SELF) DOT | ) AT_ID (LPN expressions RPN | ) | exprobj;
-	exprobj: NEW ID LPN expressions RPN | exprparen;
-	exprparen: LPN exprstr RPN | exprlelf;
-	exprlelf: identifiers | literals | SELF;
+	exprinst
+		: exprinst DOT ID (parenexpr | ) 
+		| SELF DOT ID (parenexpr | )
+		| exprstat
+		;
+	exprstat: ((ID | SELF) DOT | ) AT_ID (parenexpr | ) | exprobj;
+	exprobj: NEW ID parenexpr | exprparen;
+	exprparen: LPN exprstr RPN | identifiers | literals;
 
 	identifiers: ID | AT_ID;
-	literals: INT_LIT | FLOAT_LIT | BOOL_LIT | STR_LIT | arrayliteral;
+	literals: INT_LIT | FLOAT_LIT | boolliteral | STR_LIT | arrayliteral;
 
 	arrayliteral: LBK (arrint | arrfloat | arrbool | arrstr) RBK;
 	arrint: INT_LIT CM arrint | INT_LIT;
 	arrfloat: FLOAT_LIT CM arrfloat | FLOAT_LIT;
-	arrbool: BOOL_LIT CM arrbool | BOOL_LIT;
+	arrbool: boolliteral CM arrbool | boolliteral;
 	arrstr: STR_LIT CM arrstr | STR_LIT;
+
+	boolliteral: TRUE | FALSE;
 // Statements
 	statements: stmt statements | ;
 	stmt
 		: (VAR | CONST | ) stmtassign SM
-		| IF (stmtblock | ) exprstr stmtblock (ELSE stmtblock | )
-		| FOR stmtassign SM exprrel SM stmtassign stmtblock
+		| IF (blockstmt | ) exprstr blockstmt (ELSE blockstmt | )
+		| FOR stmtassign SM exprrel SM stmtassign blockstmt
 		| BREAK SM
 		| CONTINUE SM
-		| RETURN exprstr SM
+		| RETURN (exprstr | ) SM
 		| exprinst SM
 		| attribute SM
 		;
-	stmtassign: exprindex ASSIGN exprstr;
+	stmtassign: lhs ASSIGN exprstr;
+	lhs: lhs LBK exprstr RBK | lhsinst;
+	lhsinst
+		: lhsinst DOT ID (parenexpr | )
+		| SELF DOT ID (parenexpr | )
+		| lhsstat
+		;
+	lhsstat: ((ID | SELF) DOT | ) AT_ID (parenexpr | ) | lhsparen;
+	lhsparen: LPN lhs RPN | identifiers;
 /*  
 Lexer tokens
 */
@@ -132,7 +145,6 @@ Lexer tokens
 // Literals
 	INT_LIT: DIGIT+;
 	FLOAT_LIT: DIGIT+ (FLOAT_DEC | FLOAT_EXP | FLOAT_DEC FLOAT_EXP);
-	BOOL_LIT: TRUE | FALSE;
 	STR_LIT: '"' STR_CHAR* '"' {self.text = self.text[1:-1]};
 // Comment
 	BLOCK_COMMENT: '/*' .*? '*/' -> skip;
@@ -146,7 +158,7 @@ Lexer tokens
 	fragment DIGIT: [0-9];
 	fragment STR_CHAR:  ~[\n\r\\"] | '\\' [btnfr"\\];
 // EXCEPTION
-	WS: [ \t\b\f\r\n]+ -> skip;
+	WS: [ \t\r\n]+ -> skip;
 	UNCLOSE_STRING: '"' STR_CHAR* {self.text = self.text[1:]; raise UncloseString(self.text)};
 	ILLEGAL_ESCAPE: '"' ('\\'[btnfr'\\] | ~[\n\r\\"])* ('\\'(~[btnfr'\\])) {self.text = self.text[1:]; raise IllegalEscape(self.text)};
-	ERROR_CHAR: . {raise Exception(self.text)};
+	ERROR_CHAR: . {raise ErrorToken(self.text)};

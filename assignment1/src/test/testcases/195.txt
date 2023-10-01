@@ -1,0 +1,2 @@
+a: string = "haram"; //shinisokonai
+ print a;

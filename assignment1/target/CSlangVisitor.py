@@ -159,8 +159,8 @@ class CSlangVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by CSlangParser#exprlelf.
-    def visitExprlelf(self, ctx:CSlangParser.ExprlelfContext):
+    # Visit a parse tree produced by CSlangParser#exprleaf.
+    def visitExprleaf(self, ctx:CSlangParser.ExprleafContext):
         return self.visitChildren(ctx)
 
 
@@ -211,6 +211,31 @@ class CSlangVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by CSlangParser#stmtassign.
     def visitStmtassign(self, ctx:CSlangParser.StmtassignContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by CSlangParser#lhs.
+    def visitLhs(self, ctx:CSlangParser.LhsContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by CSlangParser#lhsinst.
+    def visitLhsinst(self, ctx:CSlangParser.LhsinstContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by CSlangParser#lhsstat.
+    def visitLhsstat(self, ctx:CSlangParser.LhsstatContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by CSlangParser#lhsparen.
+    def visitLhsparen(self, ctx:CSlangParser.LhsparenContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by CSlangParser#lhsleaf.
+    def visitLhsleaf(self, ctx:CSlangParser.LhsleafContext):
         return self.visitChildren(ctx)
 
 

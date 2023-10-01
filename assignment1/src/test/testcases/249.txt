@@ -1,0 +1,7 @@
+class Program {
+            var x: int = 10;
+            func @main():int {
+                if self.x > 5 {return self.x;}
+                else {return 0;}
+            }
+        }

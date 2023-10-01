@@ -1,0 +1,1 @@
+class,Program,{,const,a,:,[,789,],int,=,[,12,],;,},<EOF>

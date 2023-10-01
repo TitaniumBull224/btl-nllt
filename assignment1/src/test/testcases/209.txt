@@ -1,10 +1,1 @@
-class Program {
-            var a: int = 5;
-            func @increment():void {
-                self.a := self.a + 1;
-            }
-            func @main():int {
-                @increment();
-                return self.a;
-            }
-        }
+.12

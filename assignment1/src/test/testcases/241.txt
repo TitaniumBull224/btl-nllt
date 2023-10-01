@@ -1,0 +1,5 @@
+class Program {
+            func @how(): void {
+                a.a.a();
+            }
+        }

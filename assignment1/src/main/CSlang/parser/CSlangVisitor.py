@@ -84,8 +84,13 @@ class CSlangVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by CSlangParser#stmtblock.
-    def visitStmtblock(self, ctx:CSlangParser.StmtblockContext):
+    # Visit a parse tree produced by CSlangParser#blockstmt.
+    def visitBlockstmt(self, ctx:CSlangParser.BlockstmtContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by CSlangParser#parenexpr.
+    def visitParenexpr(self, ctx:CSlangParser.ParenexprContext):
         return self.visitChildren(ctx)
 
 
@@ -159,11 +164,6 @@ class CSlangVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by CSlangParser#exprlelf.
-    def visitExprlelf(self, ctx:CSlangParser.ExprlelfContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by CSlangParser#identifiers.
     def visitIdentifiers(self, ctx:CSlangParser.IdentifiersContext):
         return self.visitChildren(ctx)
@@ -199,6 +199,11 @@ class CSlangVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by CSlangParser#boolliteral.
+    def visitBoolliteral(self, ctx:CSlangParser.BoolliteralContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by CSlangParser#statements.
     def visitStatements(self, ctx:CSlangParser.StatementsContext):
         return self.visitChildren(ctx)
@@ -211,6 +216,26 @@ class CSlangVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by CSlangParser#stmtassign.
     def visitStmtassign(self, ctx:CSlangParser.StmtassignContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by CSlangParser#lhs.
+    def visitLhs(self, ctx:CSlangParser.LhsContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by CSlangParser#lhsinst.
+    def visitLhsinst(self, ctx:CSlangParser.LhsinstContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by CSlangParser#lhsstat.
+    def visitLhsstat(self, ctx:CSlangParser.LhsstatContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by CSlangParser#lhsparen.
+    def visitLhsparen(self, ctx:CSlangParser.LhsparenContext):
         return self.visitChildren(ctx)
 
 

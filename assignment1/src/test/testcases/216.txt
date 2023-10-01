@@ -1,6 +1,1 @@
-class Program {
-            func @main():int {
-                @increment();
-                return self.a;
-            }
-        }
+class A <- B{var delta: int = 3;}

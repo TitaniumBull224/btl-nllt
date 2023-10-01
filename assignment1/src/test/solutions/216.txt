@@ -1,1 +1,1 @@
-successful
+class,A,<-,B,{,var,delta,:,int,=,3,;,},<EOF>

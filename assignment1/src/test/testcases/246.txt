@@ -1,0 +1,5 @@
+class Program {
+            func @how(): void {
+                const n, t, r: string = abc^@aou, "[4,\" 2]", "\\what\t";
+            }
+        }

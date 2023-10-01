@@ -1,10 +1,1 @@
-class Program {
-            var a: int = 5;
-            func @multiply(n: int):void {
-                self.a := self.a * n;
-            }
-            func @main():int {
-                @multiply(2);
-                return self.a;
-            }
-        }
+ "illegally escaped 

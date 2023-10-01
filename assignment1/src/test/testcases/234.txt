@@ -1,0 +1,10 @@
+class Program {
+            var x: int = 30;
+            func @quadruple(n: int):int {
+                return n * 4;
+            }
+            func @main():int {
+                self.x := @quadruple(self.x);
+                return self.x;
+            }
+        }

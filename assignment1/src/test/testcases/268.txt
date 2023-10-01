@@ -1,0 +1,6 @@
+class Program {
+            func @main():void {
+                do {return;} while true;
+                else {return;}
+            }
+        }

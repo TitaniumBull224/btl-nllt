@@ -1,0 +1,8 @@
+class Program {
+            var x: int = 10;
+            func @main():int {
+                for i := 0; i < self.x; i := i + 1 {
+                    return i;
+                }
+            }
+        }

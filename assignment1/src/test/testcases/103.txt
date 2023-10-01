@@ -1,0 +1,2 @@
+var self.x := 1;/* This is a block comment, that
+may span in many lines*/

@@ -1,3 +1,1 @@
-class Program {
-            var a: int = 5
-        }
+143e+2 /*comment*/ 20

@@ -1,0 +1,1 @@
+class,Program,{,func,constructor,{,break,;,},},<EOF>

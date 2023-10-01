@@ -1,0 +1,4 @@
+func @main():int {
+            self.x := @triple(self.x);
+            return self.x;
+        }

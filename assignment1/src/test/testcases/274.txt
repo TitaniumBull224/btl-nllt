@@ -1,0 +1,5 @@
+class Program {
+            func @main():void {
+                var a: [3]int = [23, , 5];
+            }
+        }

@@ -1,0 +1,5 @@
+class Program {
+            func @how(): void {
+                const n, t, r: [3]int = [1, 2], [4, 2], [5, 9];
+            }
+        }

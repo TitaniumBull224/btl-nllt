@@ -1,1 +1,1 @@
-successful
+1,abcd,<EOF>

@@ -1,0 +1,4 @@
+class Omega
+ {
+	var alpha: int = 563;
+}

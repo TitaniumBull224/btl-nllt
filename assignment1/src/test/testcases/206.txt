@@ -1,8 +1,1 @@
-class Program {
-            func @main():int {
-                for i := 0;  i < 10;  i := 1 {
-                    if {j := 5;} j > i {j := j - 1; continue;} else {j := j + 1; break;}
-                    return i * j + 3;
-                }
-            }
-        }
+/*abcxyz*/ 1234
