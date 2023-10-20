@@ -1,1 +1,0 @@
-io,.,@writeInt,(,delta,[,2,],),;,<EOF>

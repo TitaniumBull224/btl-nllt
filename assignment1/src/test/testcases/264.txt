@@ -1,5 +1,0 @@
-Program {
-            func @main():void {
-                const x: int = 10;
-            }
-        }

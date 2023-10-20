@@ -1,1 +1,0 @@
-class,A,<-,B,{,var,@a,:,bool,=,false,;,},<EOF>

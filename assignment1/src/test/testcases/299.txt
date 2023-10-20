@@ -1,5 +1,0 @@
-class Program {
-            func @main():void {
-                if true {return;} else return;
-            }
-        }

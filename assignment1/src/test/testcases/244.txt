@@ -1,5 +1,0 @@
-class Program {
-            func @how(): void {
-                self := self + 1;
-            }
-        }

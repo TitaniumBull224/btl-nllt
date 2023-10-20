@@ -5,6 +5,8 @@
   "python.formatting.provider": "none",
   "python.analysis.extraPaths": [
     "./assignment1/src/main/CSlang/parser",
-    "./assignment1/src/test"
+    "./assignment1/src/test",
+    "./assignment2/src/main/CSlang/utils",
+    "./assignment2/target"
   ]
 }

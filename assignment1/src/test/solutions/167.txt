@@ -1,1 +1,0 @@
-func,@main,(,),:,int,{,self,.,x,:=,@double,(,self,.,x,),;,return,self,.,x,;,},<EOF>

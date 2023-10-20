@@ -1,1 +1,0 @@
-class,Program,{,func,@how,(,),:,void,{,if,i,>,2,{,return,;,},},},<EOF>

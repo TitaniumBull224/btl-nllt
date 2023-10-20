@@ -1,3 +1,0 @@
-class Program {
-            const a: [123]int = [45];
-        }

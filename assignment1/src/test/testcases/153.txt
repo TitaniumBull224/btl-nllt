@@ -1,1 +1,0 @@
-var kaela: [3]int = ["uuu",1,true]

@@ -1,5 +1,0 @@
-class Program {
-            func @main():void {
-                var int x = 23;
-            }
-        }

@@ -1,5 +1,0 @@
-class Program {
-            func constructor {
-                break;
-            }
-        }

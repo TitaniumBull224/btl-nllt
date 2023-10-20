@@ -1,5 +1,0 @@
-class Program {
-            func @main():int {
-                return self.a % 5;
-            }
-        }

@@ -1,3 +1,0 @@
-class Program {
-            var @mb : [3]int;
-        }

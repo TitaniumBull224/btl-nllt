@@ -1,5 +1,0 @@
-class Program {
-            func @main():void {
-                for i := 0; i < 10; i := i + 1 {return i := 1;}
-            }
-        }
