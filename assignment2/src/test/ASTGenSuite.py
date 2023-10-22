@@ -52,3 +52,25 @@ class ASTGenSuite(unittest.TestCase):
         """
         expect = """Program([ClassDecl(Id(main),[MethodDecl(Id(foo),[Param(Id(a),IntType),Param(Id(b),FloatType)],VoidType,Block([])),MethodDecl(Id(@main),[],VoidType,Block([Call(Id(io),Id(printInt),[IntLit(4)])]))])])"""
         self.assertTrue(TestAST.test(input, expect, 306))
+
+    def test7(self):
+        input = """
+            class Program {
+                var x: int = 65;
+                func @fact(n: int):int {
+                    if {i := 1;} n == 0 {return 1;}
+                    else {return n * @fact(n - 1);}
+                }
+                func  @inc( n, delta: int):void {
+                    n := n + delta;
+                    return n;
+                }
+                func @main():int {
+                    var delta: int = @fact(3);
+                    @inc(self.x, delta);
+                    io.@writeInt(self.x);
+                }
+            }
+        """
+        expect = """Program([ClassDecl(Id(Program),[AttributeDecl(VarDecl(Id(x),IntType,IntLit(65))),MethodDecl(Id(@fact),[Param(Id(n),IntType)],IntType,Block([If(Block([Return(IntLit(1))]),BinaryOp(==,Id(n),IntLit(0)),Block([Return(BinaryOp(*,Id(n),CallExpr(Id(@fact),[BinaryOp(-,Id(n),IntLit(1))])))]))])),MethodDecl(Id(@inc),[Param(Id(n),IntType),Param(Id(delta),IntType)],VoidType,Block([AssignStmt(Id(n),BinaryOp(+,Id(n),Id(delta))),Return(Id(n))])),MethodDecl(Id(@main),[],IntType,Block([VarDecl(Id(delta),IntType,CallExpr(Id(@fact),[IntLit(3)])),Call(Id(@inc),[FieldAccess(Self(),Id(x)),Id(delta)]),Call(Id(io),Id(@writeInt),[FieldAccess(Self(),Id(x))])]))])])"""
+        self.assertTrue(TestAST.test(input, expect, 307))

@@ -1,14 +1,8 @@
-import unittest
-from TestUtils import TestParser
 
-
-class ParserSuite(unittest.TestCase):
-    def test7(self):
-        input = """
             class Program {
                 var x: int = 65;
                 func @fact(n: int):int {
-                    if n == 0 {return 1;}
+                    if {i := 1;} n == 0 {return 1;}
                     else {return n * @fact(n - 1);}
                 }
                 func  @inc( n, delta: int):void {
@@ -21,6 +15,4 @@ class ParserSuite(unittest.TestCase):
                     io.@writeInt(self.x);
                 }
             }
-        """
-        expect = """successful"""
-        self.assertTrue(TestParser.test(input, expect, 201))
+        

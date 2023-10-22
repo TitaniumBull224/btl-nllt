@@ -4,20 +4,6 @@ from AST import *
 
 
 class ASTGeneration(CSlangVisitor):
-    # def visitProgram(self, ctx: CSlangParser.ProgramContext):
-    #     return Program([self.visit(x) for x in ctx.classdecl()])
-
-    # def visitClassdecl(self, ctx: CSlangParser.ClassdeclContext):
-    #     return ClassDecl(Id(ctx.ID().getText()), [self.visit(x) for x in ctx.memdecl()])
-
-    # def visitMemdecl(self, ctx: CSlangParser.MemdeclContext):
-    #     return AttributeDecl(
-    #         VarDecl(Id(ctx.ID().getText()), self.visit(ctx.cslangtype()))
-    #     )
-
-    # def visitCslangtype(self, ctx: CSlangParser.CslangtypeContext):
-    #     return IntType() if ctx.INTTYPE() else VoidType()
-
     def visitProgram(self, ctx: CSlangParser.ProgramContext):
         return Program(self.visit(ctx.classdecllist()))
 
@@ -339,15 +325,9 @@ class ASTGeneration(CSlangVisitor):
 
     def visitStmt(self, ctx: CSlangParser.StmtContext):
         if ctx.IF():
-            if ctx.getChildCount() == 5:
-                thenIn, preIn, elseIn = 1, 0, 2
-            elif ctx.getChildCount() == 4:
-                thenIn, preIn, elseIn = 0, -1, 1
-            elif ctx.getChildCount() == 3:
-                thenIn, preIn, elseIn = 1, 0, -1
-            else:
-                thenIn, preIn, elseIn = 0, -1, -1
-
+            index_map = {6: (1, 0, 2), 5: (0, -1, 1), 4: (1, 0, -1)}
+            thenIn, preIn, elseIn = index_map.get(ctx.getChildCount(), (0, -1, -1))
+            print((thenIn, preIn, elseIn))
             return [
                 If(
                     self.visit(ctx.exprstr()),
