@@ -125,6 +125,15 @@ class CSlangListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by CSlangParser#param.
+    def enterParam(self, ctx:CSlangParser.ParamContext):
+        pass
+
+    # Exit a parse tree produced by CSlangParser#param.
+    def exitParam(self, ctx:CSlangParser.ParamContext):
+        pass
+
+
     # Enter a parse tree produced by CSlangParser#blockstmt.
     def enterBlockstmt(self, ctx:CSlangParser.BlockstmtContext):
         pass
@@ -266,6 +275,15 @@ class CSlangListener(ParseTreeListener):
 
     # Exit a parse tree produced by CSlangParser#exprparen.
     def exitExprparen(self, ctx:CSlangParser.ExprparenContext):
+        pass
+
+
+    # Enter a parse tree produced by CSlangParser#statpart.
+    def enterStatpart(self, ctx:CSlangParser.StatpartContext):
+        pass
+
+    # Exit a parse tree produced by CSlangParser#statpart.
+    def exitStatpart(self, ctx:CSlangParser.StatpartContext):
         pass
 
 

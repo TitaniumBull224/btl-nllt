@@ -18,23 +18,28 @@ Parser rules
 	memberlist: member memberlist | ;
 	member: attribute SM | method;
 // Attribute declaration
-	attribute: (VAR | CONST) (attlistdecl | attlistnodecl);
+	// attribute: (VAR | CONST) (attlistdecl | attlistnodecl);
+	attribute: vardecl | constdecl;
+	vardecl: VAR (attlistdecl | attlistnodecl);
+	constdecl: CONST (attlistdecl | attlistnodecl);
 	attlistdecl: identifier CM attlistdecl CM exprstr | identifier COL atttyp DECLARE exprstr;
 	attlistnodecl: identifier CM attlistnodecl | identifier COL atttyp;
 	atttyp: (LBK INTLIT RBK)? typ;
 	typ: INT | FLOAT | BOOL | STRING | ID;
 // Method declaration
 	method
-		: FUNC identifier LPN paramlist? RPN COL (typ | VOID) blockstmt 
+		: FUNC identifier LPN paramlist? RPN COL (atttyp | VOID) blockstmt 
 		| FUNC CONSTRUCTOR LPN paramlist? RPN blockstmt
 		;
-	paramlist: params CM paramlist | params COL typ;
-	params: ID CM params | ID;
+	paramlist: params CM paramlist | params;
+	params: param COL atttyp; 
+	param: identifier CM param | identifier;
+
 	blockstmt: LBR stmtlist RBR;
 	parenexpr: LPN exprlist RPN;
 // Expressions
 	exprlist: exprprime | ;
-	exprprime: exprstr CM exprlist | exprstr;
+	exprprime: exprstr CM exprprime | exprstr;
 
 	exprstr: exprrel CONCATE exprrel | exprrel;
 	exprrel: exprlog (EQ | NEQ | LT | LTEQ | GT | GTEQ) exprlog | exprlog;
@@ -45,37 +50,41 @@ Parser rules
 	exprsign: SUB exprsign | exprindex;
 	exprindex: exprinst LBK exprstr RBK | exprinst;
 	exprinst: exprinst DOT ID parenexpr? | exprstat;
-	exprstat: (ID DOT)? ATID parenexpr? | exprobj;
+	exprstat: statpart | exprobj;
 	exprobj: NEW ID parenexpr | exprparen;
 	exprparen: LPN exprstr RPN | lit;
 
+	statpart: (ID DOT)? ATID parenexpr?;
+// Literals
 	identifier: ID | ATID;
 	lit: INTLIT | FLOATLIT | boollit | STRLIT | arraylit | NULL | SELF | identifier;
 	boollit: TRUE | FALSE;
 	arraylit: LBK litprime RBK;
 
 	litlist: litprime | ;
-	litprime: lit CM litlist | lit;
+	litprime: lit CM litprime | lit;
 // Statements
 	stmtlist: stmt stmtlist | ;
 	stmt
-		: (VAR | CONST)? stmtassign SM
-		| IF blockstmt? exprstr blockstmt (ELSE blockstmt)?
-		| FOR stmtassign SM exprrel SM stmtassign blockstmt
+		: IF blockstmt? exprstr blockstmt (ELSE blockstmt)?
+		| FOR stmtassign SM exprstr SM stmtassign blockstmt
+		| (VAR | CONST)? stmtassign SM
 		| BREAK SM
 		| CONTINUE SM
 		| RETURN exprstr? SM
 		| stmtinvoc SM
-		| attribute SM
+		| stmtdecl SM
 		;
 	stmtassign: lhs ASSIGN exprstr;
 	lhs: lhs LBK exprstr RBK | lhsinst;
 	lhsinst: lhsinst DOT ID parenexpr? | lhsstat;
-	lhsstat: (ID DOT)? ATID parenexpr? | lhsparen;
+	lhsstat: statpart | lhsparen;
 	lhsparen: LPN lhs RPN | SELF | identifier;
 
-	stmtinvoc: stmtinvoc DOT ID parenexpr? | stmtinvocstat;
-	stmtinvocstat: (ID DOT)? ATID parenexpr? | SELF | identifier;
+	stmtinvoc: stmtinvoc DOT ID parenexpr | stmtinvocstat;
+	stmtinvocstat: (ID DOT)? ATID parenexpr | SELF | identifier;
+
+	stmtdecl: vardecl | constdecl;
 /*  
 Lexer tokens
 */

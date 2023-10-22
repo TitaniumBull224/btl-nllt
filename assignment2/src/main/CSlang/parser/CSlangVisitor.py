@@ -39,6 +39,16 @@ class CSlangVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by CSlangParser#vardecl.
+    def visitVardecl(self, ctx:CSlangParser.VardeclContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by CSlangParser#constdecl.
+    def visitConstdecl(self, ctx:CSlangParser.ConstdeclContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by CSlangParser#attlistdecl.
     def visitAttlistdecl(self, ctx:CSlangParser.AttlistdeclContext):
         return self.visitChildren(ctx)
@@ -71,6 +81,11 @@ class CSlangVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by CSlangParser#params.
     def visitParams(self, ctx:CSlangParser.ParamsContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by CSlangParser#param.
+    def visitParam(self, ctx:CSlangParser.ParamContext):
         return self.visitChildren(ctx)
 
 
@@ -154,6 +169,11 @@ class CSlangVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by CSlangParser#statpart.
+    def visitStatpart(self, ctx:CSlangParser.StatpartContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by CSlangParser#identifier.
     def visitIdentifier(self, ctx:CSlangParser.IdentifierContext):
         return self.visitChildren(ctx)
@@ -226,6 +246,11 @@ class CSlangVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by CSlangParser#stmtinvocstat.
     def visitStmtinvocstat(self, ctx:CSlangParser.StmtinvocstatContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by CSlangParser#stmtdecl.
+    def visitStmtdecl(self, ctx:CSlangParser.StmtdeclContext):
         return self.visitChildren(ctx)
 
 
