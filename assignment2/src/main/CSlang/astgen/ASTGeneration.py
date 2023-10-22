@@ -16,18 +16,11 @@ class ASTGeneration(CSlangVisitor):
         )
 
     def visitClassdecl(self, ctx: CSlangParser.ClassdeclContext):
-        if ctx.LARROW():
-            return ClassDecl(
-                Id(ctx.ID(1).getText()),
-                self.visit(ctx.memberlist()),
-                Id(ctx.ID(0).getText()),
-            )
-        else:
-            return ClassDecl(
-                Id(ctx.ID(0).getText()),
-                self.visit(ctx.memberlist()),
-                None,
-            )
+        return ClassDecl(
+            Id(ctx.ID(1).getText() if ctx.LARROW() else ctx.ID(0).getText()),
+            self.visit(ctx.memberlist()),
+            Id(ctx.ID(0).getText()) if ctx.LARROW() else None,
+        )
 
     def visitMemberlist(self, ctx: CSlangParser.MemberlistContext):
         return (
@@ -59,8 +52,7 @@ class ASTGeneration(CSlangVisitor):
         return [ConstDecl(*x) for x in self.visit(node)]
 
     def visitAttlistdecl(self, ctx: CSlangParser.AttlistdeclContext):
-        ids = []
-        exprs = []
+        ids, exprs = [], []
         while ctx.attlistdecl():
             ids.append(self.visit(ctx.identifier()))
             exprs.insert(0, self.visit(ctx.exprstr()))
@@ -102,22 +94,22 @@ class ASTGeneration(CSlangVisitor):
 
     # Method declaration
     def visitMethod(self, ctx: CSlangParser.MethodContext):
-        params = self.visit(ctx.paramlist()) if ctx.paramlist() else []
-        if ctx.identifier():
-            typ = self.visit(ctx.atttyp()) if ctx.atttyp() else VoidType()
-            return MethodDecl(
-                self.visit(ctx.identifier()),
-                params,
-                typ,
-                self.visit(ctx.blockstmt()),
-            )
-        else:
-            return MethodDecl(
-                Id(ctx.CONSTRUCTOR().getText()),
-                params,
-                VoidType(),
-                self.visist(ctx.blockstmt()),
-            )
+        id = (
+            self.visit(ctx.identifier())
+            if ctx.identifier()
+            else Id(ctx.CONSTRUCTOR().getText())
+        )
+        typ = (
+            self.visit(ctx.atttyp())
+            if ctx.identifier() and ctx.atttyp()
+            else VoidType()
+        )
+        return MethodDecl(
+            id,
+            self.visit(ctx.paramlist()) if ctx.paramlist() else [],
+            typ,
+            self.visit(ctx.blockstmt()),
+        )
 
     def visitParamlist(self, ctx: CSlangParser.ParamlistContext):
         return (
@@ -327,7 +319,6 @@ class ASTGeneration(CSlangVisitor):
         if ctx.IF():
             index_map = {6: (1, 0, 2), 5: (0, -1, 1), 4: (1, 0, -1)}
             thenIn, preIn, elseIn = index_map.get(ctx.getChildCount(), (0, -1, -1))
-            print((thenIn, preIn, elseIn))
             return [
                 If(
                     self.visit(ctx.exprstr()),
@@ -408,15 +399,9 @@ class ASTGeneration(CSlangVisitor):
             return SelfLiteral()
         elif ctx.identifier():
             return self.visit(ctx.identifier())
-        elif ctx.ID():
-            return CallStmt(
-                Id(ctx.ID().getText()),
-                Id(ctx.ATID().getText()),
-                self.visit(ctx.parenexpr()),
-            )
         else:
             return CallStmt(
-                None,
+                Id(ctx.ID().getText()) if ctx.ID() else None,
                 Id(ctx.ATID().getText()),
                 self.visit(ctx.parenexpr()),
             )
