@@ -1,0 +1,5 @@
+class main {
+            func test():void{
+                x.b[2] := x.m()[3];
+            }
+        }

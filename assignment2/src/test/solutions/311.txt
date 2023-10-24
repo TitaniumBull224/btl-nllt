@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(main),[AttributeDecl(ConstDecl(Id(a),ArrayType(5,ClassType(Id(Shape))),StringLit(22)))])])

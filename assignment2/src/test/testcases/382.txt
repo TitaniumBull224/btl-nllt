@@ -1,0 +1,5 @@
+class main {
+            func constructor(){
+                var a:string = new X("hi");
+            }
+        }

@@ -1,0 +1,7 @@
+class main {
+            func test():void{
+                if true {
+                    a:=1;
+                }
+            }
+        }

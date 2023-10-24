@@ -1,0 +1,5 @@
+class main {
+            func test():void{
+                self.aPI := 3.14;
+            }
+        }

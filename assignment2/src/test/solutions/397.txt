@@ -1,0 +1,1 @@
+Program([ClassDecl(Id(main),[AttributeDecl(ConstDecl(Id(a),ClassType(Id(Temp)),ArrayCell(BinaryOp(==,StringLit(awd),StringLit(dwa)),IntLit(2))))])])

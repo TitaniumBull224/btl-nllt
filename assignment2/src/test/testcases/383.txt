@@ -1,0 +1,8 @@
+class main {
+            func constructor(){
+                var a:string = "hi";
+                if true {
+                    io.@Write("bye");
+                }
+            }
+        }

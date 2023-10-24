@@ -3,7 +3,7 @@ from TestUtils import TestParser
 
 
 class ParserSuite(unittest.TestCase):
-    def test7(self):
+    def test0(self):
         input = """
             class Program {
                 var x: int = 65;

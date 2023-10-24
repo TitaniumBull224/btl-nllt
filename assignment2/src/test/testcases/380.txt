@@ -1,0 +1,6 @@
+class main {
+            func constructor(){
+                var t:int;
+                var a:string;
+            }
+        }

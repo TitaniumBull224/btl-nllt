@@ -62,6 +62,24 @@ class CSlangListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by CSlangParser#vardecl.
+    def enterVardecl(self, ctx:CSlangParser.VardeclContext):
+        pass
+
+    # Exit a parse tree produced by CSlangParser#vardecl.
+    def exitVardecl(self, ctx:CSlangParser.VardeclContext):
+        pass
+
+
+    # Enter a parse tree produced by CSlangParser#constdecl.
+    def enterConstdecl(self, ctx:CSlangParser.ConstdeclContext):
+        pass
+
+    # Exit a parse tree produced by CSlangParser#constdecl.
+    def exitConstdecl(self, ctx:CSlangParser.ConstdeclContext):
+        pass
+
+
     # Enter a parse tree produced by CSlangParser#attlistdecl.
     def enterAttlistdecl(self, ctx:CSlangParser.AttlistdeclContext):
         pass
@@ -419,6 +437,15 @@ class CSlangListener(ParseTreeListener):
 
     # Exit a parse tree produced by CSlangParser#stmtinvocstat.
     def exitStmtinvocstat(self, ctx:CSlangParser.StmtinvocstatContext):
+        pass
+
+
+    # Enter a parse tree produced by CSlangParser#stmtdecl.
+    def enterStmtdecl(self, ctx:CSlangParser.StmtdeclContext):
+        pass
+
+    # Exit a parse tree produced by CSlangParser#stmtdecl.
+    def exitStmtdecl(self, ctx:CSlangParser.StmtdeclContext):
         pass
 
 

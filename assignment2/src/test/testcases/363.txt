@@ -1,0 +1,5 @@
+class main {
+            func test():void{
+                var a,b:[6]Shape;
+            }
+        }

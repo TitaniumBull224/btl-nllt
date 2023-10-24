@@ -244,6 +244,11 @@ class CSlangVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by CSlangParser#stmtinvocinst.
+    def visitStmtinvocinst(self, ctx:CSlangParser.StmtinvocinstContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by CSlangParser#stmtinvocstat.
     def visitStmtinvocstat(self, ctx:CSlangParser.StmtinvocstatContext):
         return self.visitChildren(ctx)

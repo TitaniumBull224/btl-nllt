@@ -1,0 +1,3 @@
+class main {
+            const a:Temp = (2+5).t();
+        }

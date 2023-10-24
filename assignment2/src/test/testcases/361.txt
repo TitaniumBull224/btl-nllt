@@ -1,0 +1,5 @@
+class main {
+            func test():void{
+                const a,b:int = 2,4;
+            }
+        }

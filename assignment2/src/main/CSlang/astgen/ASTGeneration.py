@@ -90,7 +90,7 @@ class ASTGeneration(CSlangVisitor):
         elif ctx.STRING():
             return StringType()
         elif ctx.ID():
-            return ClassType(ctx.ID().getText())
+            return ClassType(Id(ctx.ID().getText()))
 
     # Method declaration
     def visitMethod(self, ctx: CSlangParser.MethodContext):
@@ -152,7 +152,7 @@ class ASTGeneration(CSlangVisitor):
                 self.visit(ctx.exprrel(0)),
                 self.visit(ctx.exprrel(1)),
             )
-            if ctx.getChildCount == 3
+            if ctx.getChildCount() == 3
             else self.visit(ctx.exprrel(0))
         )
 
@@ -222,14 +222,23 @@ class ASTGeneration(CSlangVisitor):
         )
 
     def visitExprinst(self, ctx: CSlangParser.ExprinstContext):
-        if ctx.getChildCount() == 4:
+        num = ctx.getChildCount()
+        exprinst = self.visit(ctx.exprinst()) if ctx.exprinst() else None
+        if num in [7, 4]:
             return CallExpr(
-                self.visit(ctx.exprinst()),
+                ArrayCell(exprinst, self.visit(ctx.exprstr()))
+                if num == 7
+                else exprinst,
                 Id(ctx.ID().getText()),
                 self.visit(ctx.parenexpr()),
             )
-        elif ctx.getChildCount() == 3:
-            return FieldAccess(self.visit(ctx.exprinst()), Id(ctx.ID().getText()))
+        elif num in [6, 3]:
+            return FieldAccess(
+                ArrayCell(exprinst, self.visit(ctx.exprstr()))
+                if num == 6
+                else exprinst,
+                Id(ctx.ID().getText()),
+            )
         else:
             return self.visit(ctx.exprstat())
 
@@ -242,7 +251,7 @@ class ASTGeneration(CSlangVisitor):
         return (
             NewExpr(
                 Id(ctx.ID().getText()),
-                [self.visit(x) for x in self.visit(ctx.parenexpr())],
+                self.visit(ctx.parenexpr()),
             )
             if ctx.NEW()
             else self.visit(ctx.exprparen())
@@ -252,22 +261,13 @@ class ASTGeneration(CSlangVisitor):
         return self.visit(ctx.exprstr()) if ctx.LPN() else self.visit(ctx.lit())
 
     def visitStatpart(self, ctx: CSlangParser.StatpartContext):
-        if ctx.getChildCount() == 4:
-            return CallExpr(
-                Id(ctx.ID().getText()),
-                Id(ctx.ATID().getText()),
-                self.visit(ctx.parenexpr()),
-            )
-        elif ctx.getChildCount() == 3:
-            return FieldAccess(Id(ctx.ID().getText(), Id(ctx.ATID().getText())))
-        elif ctx.getChildCount() == 2:
-            return CallExpr(
-                None,
-                Id(ctx.ATID().getText()),
-                self.visit(ctx.parenexpr()),
-            )
-        else:
-            return Id(ctx.ATID().getText())
+        id = Id(ctx.ID().getText()) if ctx.ID() else None
+        atid = Id(ctx.ATID().getText())
+        return (
+            CallExpr(id, atid, self.visit(ctx.parenexpr()))
+            if ctx.parenexpr()
+            else FieldAccess(id, atid)
+        )
 
     # Literals
     def visitIdentifier(self, ctx: CSlangParser.IdentifierContext):
@@ -333,7 +333,7 @@ class ASTGeneration(CSlangVisitor):
                     self.visit(ctx.stmtassign(0)),
                     self.visit(ctx.exprstr()),
                     self.visit(ctx.stmtassign(1)),
-                    self.visit(ctx.blockstmt()),
+                    self.visit(ctx.blockstmt(0)),
                 )
             ]
         elif ctx.stmtassign():
@@ -360,14 +360,20 @@ class ASTGeneration(CSlangVisitor):
         )
 
     def visitLhsinst(self, ctx: CSlangParser.LhsinstContext):
-        if ctx.getChildCount() == 4:
+        num = ctx.getChildCount()
+        lhsinst = self.visit(ctx.lhsinst()) if ctx.lhsinst() else None
+
+        if num in [7, 4]:
             return CallExpr(
-                self.visit(ctx.lhsinst()),
+                ArrayCell(lhsinst, self.visit(ctx.exprstr())) if num == 7 else lhsinst,
                 Id(ctx.ID().getText()),
                 self.visit(ctx.parenexpr()),
             )
-        elif ctx.getChildCount() == 3:
-            return FieldAccess(self.visit(ctx.lhsinst()), Id(ctx.ID().getText()))
+        elif num in [6, 3]:
+            return FieldAccess(
+                ArrayCell(lhsinst, self.visit(ctx.exprstr())) if num == 6 else lhsinst,
+                Id(ctx.ID().getText()),
+            )
         else:
             return self.visit(ctx.lhsstat())
 
@@ -385,26 +391,27 @@ class ASTGeneration(CSlangVisitor):
             return self.visit(ctx.identifier())
 
     def visitStmtinvoc(self, ctx: CSlangParser.StmtinvocContext):
-        if ctx.ID():
-            return CallStmt(
-                self.visit(ctx.stmtinvoc()),
-                Id(ctx.ID().getText()),
-                self.visit(ctx.parenexpr()),
-            )
-        else:
-            return self.visit(ctx.stmtinvocstat())
+        return (
+            self.visit(ctx.stmtinvocinst())
+            if ctx.stmtinvocinst()
+            else self.visit(ctx.stmtinvocstat())
+        )
+
+    def visitStmtinvocinst(self, ctx: CSlangParser.StmtinvocinstContext):
+        return CallStmt(
+            ArrayCell(self.visit(ctx.exprinst()), self.visit(ctx.exprstr()))
+            if ctx.exprstr()
+            else self.visit(ctx.exprinst()),
+            Id(ctx.ID().getText()),
+            self.visit(ctx.parenexpr()),
+        )
 
     def visitStmtinvocstat(self, ctx: CSlangParser.StmtinvocstatContext):
-        if ctx.SELF():
-            return SelfLiteral()
-        elif ctx.identifier():
-            return self.visit(ctx.identifier())
-        else:
-            return CallStmt(
-                Id(ctx.ID().getText()) if ctx.ID() else None,
-                Id(ctx.ATID().getText()),
-                self.visit(ctx.parenexpr()),
-            )
+        return CallStmt(
+            Id(ctx.ID().getText()) if ctx.ID() else None,
+            Id(ctx.ATID().getText()),
+            self.visit(ctx.parenexpr()),
+        )
 
     def visitStmtdecl(self, ctx: CSlangParser.StmtdeclContext):
         return (

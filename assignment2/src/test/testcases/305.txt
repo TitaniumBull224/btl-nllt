@@ -1,1 +1,4 @@
-class main{ func a(): void {}}
+class main {
+            var a,b: [5]int;
+            const c: string = 5;
+        }

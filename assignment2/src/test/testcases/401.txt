@@ -1,0 +1,5 @@
+class Main {
+            func @main():void{
+                @Shape.length.getLength();
+            }
+        }
