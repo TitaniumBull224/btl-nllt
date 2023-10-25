@@ -243,9 +243,16 @@ class ASTGeneration(CSlangVisitor):
             return self.visit(ctx.exprstat())
 
     def visitExprstat(self, ctx: CSlangParser.ExprstatContext):
-        return (
-            self.visit(ctx.statpart()) if ctx.statpart() else self.visit(ctx.exprobj())
-        )
+        if ctx.ATID():
+            id = Id(ctx.ID().getText()) if ctx.ID() else None
+            atid = Id(ctx.ATID().getText())
+            return (
+                CallExpr(id, atid, self.visit(ctx.parenexpr()))
+                if ctx.parenexpr()
+                else FieldAccess(id, atid)
+            )
+        else:
+            return self.visit(ctx.exprobj())
 
     def visitExprobj(self, ctx: CSlangParser.ExprobjContext):
         return (
@@ -259,15 +266,6 @@ class ASTGeneration(CSlangVisitor):
 
     def visitExprparen(self, ctx: CSlangParser.ExprparenContext):
         return self.visit(ctx.exprstr()) if ctx.LPN() else self.visit(ctx.lit())
-
-    def visitStatpart(self, ctx: CSlangParser.StatpartContext):
-        id = Id(ctx.ID().getText()) if ctx.ID() else None
-        atid = Id(ctx.ATID().getText())
-        return (
-            CallExpr(id, atid, self.visit(ctx.parenexpr()))
-            if ctx.parenexpr()
-            else FieldAccess(id, atid)
-        )
 
     # Literals
     def visitIdentifier(self, ctx: CSlangParser.IdentifierContext):
@@ -354,33 +352,29 @@ class ASTGeneration(CSlangVisitor):
 
     def visitLhs(self, ctx: CSlangParser.LhsContext):
         return (
-            ArrayCell(self.visit(ctx.lhs()), self.visit(ctx.exprstr()))
-            if ctx.getChildCount() == 4
+            ArrayCell(self.visit(ctx.lhsinst()), self.visit(ctx.exprstr()))
+            if ctx.exprstr()
             else self.visit(ctx.lhsinst())
         )
 
     def visitLhsinst(self, ctx: CSlangParser.LhsinstContext):
-        num = ctx.getChildCount()
-        lhsinst = self.visit(ctx.lhsinst()) if ctx.lhsinst() else None
-
-        if num in [7, 4]:
-            return CallExpr(
-                ArrayCell(lhsinst, self.visit(ctx.exprstr())) if num == 7 else lhsinst,
-                Id(ctx.ID().getText()),
-                self.visit(ctx.parenexpr()),
-            )
-        elif num in [6, 3]:
+        if ctx.lhsinst():
             return FieldAccess(
-                ArrayCell(lhsinst, self.visit(ctx.exprstr())) if num == 6 else lhsinst,
+                ArrayCell(self.visit(ctx.lhsinst()), self.visit(ctx.exprstr()))
+                if ctx.exprstr()
+                else self.visit(ctx.lhsinst()),
                 Id(ctx.ID().getText()),
             )
         else:
             return self.visit(ctx.lhsstat())
 
     def visitLhsstat(self, ctx: CSlangParser.LhsstatContext):
-        return (
-            self.visit(ctx.statpart()) if ctx.statpart() else self.visit(ctx.lhsparen())
-        )
+        if ctx.ATID():
+            return FieldAccess(
+                Id(ctx.ID().getText()) if ctx.ID() else None, Id(ctx.ATID().getText())
+            )
+        else:
+            return self.visit(ctx.lhsparen())
 
     def visitLhsparen(self, ctx: CSlangParser.LhsparenContext):
         if ctx.lhs():

@@ -50,11 +50,9 @@ Parser rules
 	exprsign: SUB exprsign | exprindex;
 	exprindex: exprinst LBK exprstr RBK | exprinst;
 	exprinst: exprinst (LBK exprstr RBK)? DOT ID parenexpr? | exprstat;
-	exprstat: statpart | exprobj;
+	exprstat: (ID DOT)? ATID parenexpr? | exprobj;
 	exprobj: NEW ID parenexpr | exprparen;
 	exprparen: LPN exprstr RPN | lit;
-
-	statpart: (ID DOT)? ATID parenexpr?;
 // Literals
 	identifier: ID | ATID;
 	lit: INTLIT | FLOATLIT | boollit | STRLIT | arraylit | NULL | SELF | identifier;
@@ -76,9 +74,9 @@ Parser rules
 		| stmtdecl SM
 		;
 	stmtassign: lhs ASSIGN exprstr;
-	lhs: lhs LBK exprstr RBK | lhsinst;
-	lhsinst: lhsinst (LBK exprstr RBK)? DOT ID parenexpr? | lhsstat;
-	lhsstat: statpart | lhsparen;
+	lhs: lhsinst LBK exprstr RBK | lhsinst;
+	lhsinst: lhsinst (LBK exprstr RBK)? DOT ID | lhsstat;
+	lhsstat: (ID DOT)? ATID | lhsparen;
 	lhsparen: LPN lhs RPN | SELF | identifier;
 
 	stmtinvoc: stmtinvocinst | stmtinvocstat;

@@ -169,11 +169,6 @@ class CSlangVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by CSlangParser#statpart.
-    def visitStatpart(self, ctx:CSlangParser.StatpartContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by CSlangParser#identifier.
     def visitIdentifier(self, ctx:CSlangParser.IdentifierContext):
         return self.visitChildren(ctx)
