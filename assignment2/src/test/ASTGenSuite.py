@@ -313,6 +313,7 @@ class ASTGenSuite(unittest.TestCase):
                 ]
             )
         )
+        print("test10: ", expect)
         self.assertTrue(TestAST.test(input, expect, 310))
 
     def test11(self):
@@ -2322,7 +2323,7 @@ class ASTGenSuite(unittest.TestCase):
         input = r"""
             class main {
                 func constructor() {
-                    Hologod[0][0] := 1;
+                    Hologod[0] := a[0];
                 }
             }
         """
@@ -2340,13 +2341,13 @@ class ASTGenSuite(unittest.TestCase):
                                     [
                                         Assign(
                                             ArrayCell(
-                                                ArrayCell(
-                                                    Id("Hologod"),
-                                                    IntLiteral(0),
-                                                ),
+                                                Id("Hologod"),
                                                 IntLiteral(0),
                                             ),
-                                            IntLiteral(1),
+                                            ArrayCell(
+                                                Id("a"),
+                                                IntLiteral(0),
+                                            ),
                                         )
                                     ]
                                 ),
