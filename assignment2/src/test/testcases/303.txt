@@ -1,7 +1,3 @@
-
-            class main {
-                func @main():void{
-                    return;
-                }
-            }
-        
+class main {
+            const a,b: [5]int = 5,6;
+        }

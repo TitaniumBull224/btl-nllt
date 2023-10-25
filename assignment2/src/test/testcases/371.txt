@@ -1,7 +1,5 @@
-
-            class main {
-                func constructor() {
-                    self.Hologod()[0].aqua();
-                }
+class Main {
+            func @main():void{
+                if {i := 1;} j > i {j := j - 1;}
             }
-        
+        }

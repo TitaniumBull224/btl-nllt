@@ -1,7 +1,3 @@
-
-            class main {
-                func test():void {
-                    @Aquapex.getLP(gain.graph());
-                }
-            }
-        
+class main {
+            var a:string = 2.4e5;
+        }

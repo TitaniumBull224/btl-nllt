@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(main),[AttributeDecl(VarDecl(Id(hologod),BoolType,BinaryOp(!=,Id(a),Id(b))))])])
+Program([ClassDecl(Id(main),[MethodDecl(Id(test1),[],VoidType,Block([])),MethodDecl(Id(test2),[],IntType,Block([Return(IntLit(10))]))])])

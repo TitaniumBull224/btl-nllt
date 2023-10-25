@@ -1,7 +1,5 @@
-
-            class main {
-                func constructor() {
-                    @Hologod.Aqua.getSub();
-                }
+class Main {
+            func @main():void{
+                Shape.@getLength(a.getIndex());
             }
-        
+        }

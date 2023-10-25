@@ -1,7 +1,5 @@
-
-            class main {
-                func constructor() {
-                    var Hologod: int = 1 + -2;
-                }
+class main {
+            func test():void{
+                var a: int = n[b[2]]+3;
             }
-        
+        }

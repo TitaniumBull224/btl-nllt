@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(main),[MethodDecl(Id(test),[],VoidType,Block([AssignStmt(ArrayCell(Id(why),BinaryOp(-,IntLit(5),CallExpr(Id(x),Id(how),[BinaryOp(&&,Id(exist),UnaryOp(!,Id(exist)))]))),BinaryOp(+,ArrayCell(Id(what),ArrayCell(Id(when),BinaryOp(+,IntLit(2),Id(l)))),Id(where)))]))])])
+Program([ClassDecl(Id(main),[AttributeDecl(VarDecl(Id(a),StringType,Id(awdwa)))])])

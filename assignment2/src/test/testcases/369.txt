@@ -1,7 +1,5 @@
-
-            class main {
-                func constructor() {
-                    var Hologod: float = 1 - 2 / 3;
-                }
+class Main {
+            func @main():void{
+                if j < i {j := j - 1;} else {j := j + 1;}
             }
-        
+        }

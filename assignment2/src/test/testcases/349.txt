@@ -1,6 +1,5 @@
-
-            class main {
-                const a:Anime = new Anime(44.5);
-                func test():void{}
+class main {
+            func test():void{
+                Shape.a[2]:= 2;
             }
-        
+        }

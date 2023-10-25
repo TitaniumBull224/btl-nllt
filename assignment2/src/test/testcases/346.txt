@@ -1,10 +1,5 @@
-
-            class main {
-                func test():void {
-                    const n:int = 10;
-                    for i := 0; i < n; i := i + 1 {
-                        io.@print(i);
-                    }
-                }
+class main {
+            func test():void{
+                Shape.a := 2;
             }
-        
+        }

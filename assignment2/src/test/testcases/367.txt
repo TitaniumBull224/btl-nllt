@@ -1,7 +1,5 @@
-
-            class main {
-                func constructor() {
-                    var Hologod: bool = a && !b;
-                }
+class main {
+            func test():void{
+                x.b[3+x.foo(2)] := x.m()[3];
             }
-        
+        }

@@ -1,5 +1,4 @@
-
-            class main {
-                var hologod:int = a \ b;
-            }
-        
+class Main {
+            const a:Shape = new Shape(4,6);
+            func main():void{}
+        }

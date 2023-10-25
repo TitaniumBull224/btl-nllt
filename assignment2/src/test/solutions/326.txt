@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(main),[AttributeDecl(VarDecl(Id(a),IntType,NullLiteral()))])])
+Program([ClassDecl(Id(main),[AttributeDecl(VarDecl(Id(a),StringType,UnaryOp(-,UnaryOp(-,Id(a)))))])])

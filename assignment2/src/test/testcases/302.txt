@@ -1,5 +1,4 @@
-
-            class main {
-                const a:int = 5;
-            }
-        
+class main {
+            var a,t:int;
+            var b:int;
+        }

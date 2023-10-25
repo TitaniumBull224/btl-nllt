@@ -1,9 +1,3 @@
-
-            class main {
-                func test():void {
-                    if true {
-                        return;
-                    }
-                }
-            }
-        
+class main {
+            var a:string = a.t(1,2);
+        }

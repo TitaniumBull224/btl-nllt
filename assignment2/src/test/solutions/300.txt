@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(main),[]),ClassDecl(Id(sub),[])])
+Program([ClassDecl(Id(main),[]),ClassDecl(Id(testing),[])])

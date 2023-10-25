@@ -1,7 +1,5 @@
-
-            class main {
-                func constructor() {
-                    var Hologod: [1]int;
-                }
+class Main {
+            func test():void{
+                var a:[2]Shape = ["square","rectangle"];
             }
-        
+        }

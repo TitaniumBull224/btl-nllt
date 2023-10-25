@@ -1,5 +1,3 @@
-
-            class main {
-                var a:string = gen[0].name;
-            }
-        
+class main {
+            var a:string = a + b -c;
+        }

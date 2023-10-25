@@ -1,5 +1,3 @@
-
-            class main {
-                var a:bool = a && b || c;
-            }
-        
+class main {
+            var a:string = !!a;
+        }

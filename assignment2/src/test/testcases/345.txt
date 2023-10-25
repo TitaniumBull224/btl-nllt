@@ -1,7 +1,5 @@
-
-            class main {
-                func test():void {
-                    if {x := 0;} y > x {y := y - 1;} else {y := y + 1;}
-                }
+class main {
+            func test():void{
+                a:=new X().a[2].t[5+2];
             }
-        
+        }

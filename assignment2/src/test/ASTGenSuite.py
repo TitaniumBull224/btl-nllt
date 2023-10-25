@@ -313,7 +313,6 @@ class ASTGenSuite(unittest.TestCase):
                 ]
             )
         )
-        print("test10: ", expect)
         self.assertTrue(TestAST.test(input, expect, 310))
 
     def test11(self):

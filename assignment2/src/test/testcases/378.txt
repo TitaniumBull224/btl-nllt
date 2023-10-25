@@ -1,5 +1,4 @@
-
-            class main {
-                var hologod:[3]int = [a, 1, a1];
-            }
-        
+class Main {
+            const a:[3]string = ["square","rectangle","triangle"];
+            func main():void{}
+        }

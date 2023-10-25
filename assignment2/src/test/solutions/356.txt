@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(main),[MethodDecl(Id(constructor),[],VoidType,Block([For(AssignStmt(Id(i),IntLit(1)),BooleanLit(True),AssignStmt(Id(i),BinaryOp(+,Id(i),IntLit(1))),Block([Return(CallExpr(Id(@hologod),[Id(a)]))])])]))])])
+Program([ClassDecl(Id(Main1),[MethodDecl(Id(test1),[],VoidType,Block([Call(Id(Shape),Id(@getLength),[CallExpr(Id(Shape),Id(getIndex),[])])]))])])

@@ -1,5 +1,3 @@
-
-            class main {
-                var a:string = ("test"^"tmp")[0];
-            }
-        
+class main {
+            var a:string = "2";
+        }

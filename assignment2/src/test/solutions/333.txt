@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(main),[MethodDecl(Id(test),[],IntType,Block([If(BooleanLit(True),Block([Return(IntLit(1))]),Block([Return(IntLit(2))]))]))])])
+Program([ClassDecl(Id(main),[AttributeDecl(VarDecl(Id(a),StringType,FieldAccess(Id(Shape),Id(@a))))])])

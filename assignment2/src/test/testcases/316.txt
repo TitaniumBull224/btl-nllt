@@ -1,5 +1,3 @@
-
-            class main {
-                var a:bool = true;
-            }
-        
+class main {
+            var a:string = et == 69;
+        }

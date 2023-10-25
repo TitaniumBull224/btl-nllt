@@ -1,5 +1,3 @@
-
-            class main {
-                var a:string = k[0].b(4,8);
-            }
-        
+class main {
+            var a:string = a;
+        }

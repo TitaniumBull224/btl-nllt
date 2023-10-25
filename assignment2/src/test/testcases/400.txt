@@ -1,3 +1,9 @@
 class main {
-            const a:Temp = (2+5).t();
+            const a:Temp = new Temp(33);
+            func constructor() {
+                var b: int;
+            }
+            func constructor(a: Temp) {
+                var b: Temp = a;
+            }
         }

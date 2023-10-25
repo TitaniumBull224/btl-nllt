@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(main),[MethodDecl(Id(constructor),[],VoidType,Block([VarDecl(Id(Hologod),BoolType,BinaryOp(&&,Id(a),UnaryOp(!,Id(b))))]))])])
+Program([ClassDecl(Id(main),[MethodDecl(Id(test),[],VoidType,Block([AssignStmt(ArrayCell(FieldAccess(Id(x),Id(b)),BinaryOp(+,IntLit(3),CallExpr(Id(x),Id(foo),[IntLit(2)]))),ArrayCell(CallExpr(Id(x),Id(m),[]),IntLit(3)))]))])])

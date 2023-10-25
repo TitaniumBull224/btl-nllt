@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(main),[MethodDecl(Id(constructor),[],VoidType,Block([For(AssignStmt(Id(i),IntLit(0)),BinaryOp(<,Id(i),Id(n)),AssignStmt(Id(i),BinaryOp(+,Id(i),IntLit(1))),Block([If(BinaryOp(>,ArrayCell(Id(a),Id(i)),Id(k)),Block([Break])),AssignStmt(ArrayCell(Id(a),Id(i)),BinaryOp(-,Id(k),Id(i)))])])]))])])
+Program([ClassDecl(Id(main),[MethodDecl(Id(test),[],VoidType,Block([AssignStmt(FieldAccess(ArrayCell(Id(Shape),IntLit(2)),Id(a)),IntLit(2))]))])])

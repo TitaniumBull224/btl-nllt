@@ -1,7 +1,3 @@
-
-            class main {
-                func @main(a:int,b:float):void{
-                    return;
-                }
-            }
-        
+class main {
+            const a:string = "22";
+        }

@@ -1,5 +1,9 @@
-
-            class main {
-                var hologod:string = "onion" ^ "Aqua" + "=pred";
+class main {
+            func constructor(){
+                if false{
+                    if true{
+                        return "HelloWorld";
+                    }
+                }
             }
-        
+        }

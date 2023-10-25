@@ -1,5 +1,4 @@
-
-            class main {
-                var hologod:int = io.great();
-            }
-        
+class Main {
+            const a:[3]float = [1.09,1.0E-3,6.90];
+            func main():void{}
+        }

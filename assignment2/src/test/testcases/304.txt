@@ -1,7 +1,3 @@
-
-            class main {
-                func constructor(){
-                    return;
-                }
-            }
-        
+class main {
+            var a,b: [5]int = 5,6;
+        }

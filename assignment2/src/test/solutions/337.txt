@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(main),[MethodDecl(Id(test),[],VoidType,Block([Call(Id(Aquapex),Id(getLP),[Id(K),Id(D)])]))])])
+Program([ClassDecl(Id(main),[AttributeDecl(VarDecl(Id(a),StringType,ArrayCell(NewExpr(Id(Shape),[]),IntLit(2))))])])

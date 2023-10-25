@@ -1,6 +1,4 @@
-
-            class main {
-                var a:int;
-                const b:int = 5;
+class main {
+            func @test(a, b:int,t:[5]string):void{
             }
-        
+        }

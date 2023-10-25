@@ -1,5 +1,3 @@
 class main {
-            func test():void{
-                why[5-x.how(exist && !exist)] := what[when[2+l]]+where;
-            }
+            var a:string = awdwa;
         }

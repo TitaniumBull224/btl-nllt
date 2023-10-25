@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(main),[MethodDecl(Id(constructor),[],VoidType,Block([Call(Id(Hologod),Id(aqua),[CallExpr(Id(@len),[Id(a)])])]))])])
+Program([ClassDecl(Id(Main),[MethodDecl(Id(@main),[],VoidType,Block([For(AssignStmt(Id(j),IntLit(0)),BinaryOp(<,Id(j),IntLit(10)),AssignStmt(Id(j),BinaryOp(+,Id(j),IntLit(1))),Block([Call(Id(io),Id(@writeInt),[Id(j)]),Break])])]))])])

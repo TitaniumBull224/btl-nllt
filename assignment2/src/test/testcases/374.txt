@@ -1,7 +1,8 @@
-
-            class main {
-                func constructor() {
-                    Hologod.aqua(@len(a));
+class Main {
+            func @main():void{
+                for j := 0; j < 10; j := j + 1 {
+                    io.@writeInt(j);
+                    break;
                 }
             }
-        
+        }

@@ -1,10 +1,10 @@
-
-            class main {
-                func constructor() {
-                    for i := 0; i < n; i := i + 1 {
-                        if a[i] > k {continue;}
-                        a[i] := k * i;
-                    }
+class main {
+            func test():void{
+                if {t:=2;} true {
+                    a:=1;
+                }
+                else{
+                
                 }
             }
-        
+        }

@@ -1,5 +1,3 @@
-
-            class main {
-                var a:int = !!--anti;
-            }
-        
+class main {
+            var a:string = a *b /c;
+        }

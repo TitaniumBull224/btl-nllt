@@ -1,7 +1,3 @@
-
-            class main {
-                func test():void {
-                    const a, b: int = 420, 69;
-                }
-            }
-        
+class main {
+            var a:string = self.t[2];
+        }
