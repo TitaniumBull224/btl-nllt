@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(main),[MethodDecl(Id(constructor),[],VoidType,Block([VarDecl(Id(a),StringType,StringLit(hi)),For(AssignStmt(Id(i),IntLit(1)),BooleanLit(False),AssignStmt(Id(j),BooleanLit(True)),Block([Call(Id(@t),[])])])]))])])
+Program([ClassDecl(Id(main),[AttributeDecl(VarDecl(Id(hologod),IntType,ArrayCell(CallExpr(CallExpr(Id(io),Id(great),[Id(a),Id(b)]),Id(peak),[]),IntLit(1))))])])

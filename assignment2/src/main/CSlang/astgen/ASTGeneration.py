@@ -17,7 +17,7 @@ class ASTGeneration(CSlangVisitor):
 
     def visitClassdecl(self, ctx: CSlangParser.ClassdeclContext):
         return ClassDecl(
-            Id(ctx.ID(1).getText() if ctx.LARROW() else ctx.ID(0).getText()),
+            Id(ctx.ID(1).getText()) if ctx.LARROW() else Id(ctx.ID(0).getText()),
             self.visit(ctx.memberlist()),
             Id(ctx.ID(0).getText()) if ctx.LARROW() else None,
         )

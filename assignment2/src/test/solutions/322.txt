@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(main),[AttributeDecl(VarDecl(Id(a),StringType,BinaryOp(-,BinaryOp(+,Id(a),Id(b)),Id(c))))])])
+Program([ClassDecl(Id(main),[AttributeDecl(VarDecl(Id(a),StringType,FieldAccess(ArrayCell(Id(gen),IntLit(0)),Id(name))))])])

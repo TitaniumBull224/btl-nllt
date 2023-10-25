@@ -1,5 +1,7 @@
-class main {
-            func test():void{
-                @getArea(Shape.check());
+
+            class main {
+                func constructor() {
+                    @Hologod.Aqua.getSub();
+                }
             }
-        }
+        

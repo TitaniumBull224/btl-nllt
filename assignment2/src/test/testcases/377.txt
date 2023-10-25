@@ -1,3 +1,5 @@
-class main {
-            func constructor(a,b:int){}
-        }
+
+            class main {
+                var hologod:int = a \ b;
+            }
+        

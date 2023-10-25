@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(main),[MethodDecl(Id(constructor),[],VoidType,Block([VarDecl(Id(a),StringType,NewExpr(Id(X),[StringLit(hi)]))]))])])
+Program([ClassDecl(Id(main),[AttributeDecl(VarDecl(Id(hologod),IntType,ArrayCell(FieldAccess(CallExpr(Id(io),Id(great),[]),Id(peak)),IntLit(1))))])])

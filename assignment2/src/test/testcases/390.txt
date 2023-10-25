@@ -1,7 +1,13 @@
-class main {
-            func constructor(){
-                for i:=1;false;j:=true{
-                    return self;
+
+            class main {
+                func max(arr:[10]int):int {
+                    var max:int = arr[0];
+                    for i:=1; i<10; i:=i+1 {
+                        if arr[i] > max {
+                            max := arr[i];
+                        }
+                    }
+                    return max;
                 }
             }
-        }
+        

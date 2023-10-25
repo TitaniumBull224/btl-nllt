@@ -1,3 +1,7 @@
-class main {
-            var a:string = Shape.@a(2,5,6);
-        }
+
+            class main {
+                func test():void {
+                    Aquapex.getLP();
+                }
+            }
+        

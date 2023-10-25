@@ -1,4 +1,7 @@
-class main {
-            func test():void{}
-            func constructor(){}
-        }
+
+            class main {
+                func constructor() {
+                    Hologod.aqua(@len(a));
+                }
+            }
+        

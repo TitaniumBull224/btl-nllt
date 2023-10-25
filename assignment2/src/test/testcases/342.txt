@@ -1,3 +1,7 @@
-class main {
-            var a:string = null;
-        }
+
+            class main {
+                func test():void {
+                    var a,b:[3]Anime = [1, 2, 3], [4,5,6];
+                }
+            }
+        

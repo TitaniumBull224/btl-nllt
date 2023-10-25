@@ -1,5 +1,7 @@
-class main {
-            func test():void{
-                var a,b:[6]Shape = 2,4;
+
+            class main {
+                func constructor() {
+                    Hologod.Aqua[0].getSub();
+                }
             }
-        }
+        

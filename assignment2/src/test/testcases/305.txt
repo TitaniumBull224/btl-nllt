@@ -1,4 +1,10 @@
-class main {
-            var a,b: [5]int;
-            const c: string = 5;
-        }
+
+            class main {
+                func @main():void{
+                    return;
+                }
+                func constructor(){
+                    return;
+                }
+            }
+        

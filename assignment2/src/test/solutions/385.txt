@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(main),[MethodDecl(Id(constructor),[],VoidType,Block([For(AssignStmt(Id(i),IntLit(1)),BooleanLit(False),AssignStmt(Id(j),BooleanLit(True)),Block([For(AssignStmt(Id(j),IntLit(1)),BooleanLit(True),AssignStmt(Id(j),Id(i)),Block([])])])])]))])])
+Program([ClassDecl(Id(main),[AttributeDecl(VarDecl(Id(hologod),BoolType,BinaryOp(&&,UnaryOp(!,Id(a)),Id(b))))])])

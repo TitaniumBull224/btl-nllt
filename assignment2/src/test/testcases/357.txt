@@ -1,5 +1,11 @@
-class main {
-            func test():void{
-                Shape.getArea(Shape.test());
+
+            class main {
+                func constructor() {
+                    for i := 1; true; i := i + 1 {
+                        for j := 1; true; j := j - 1 {
+                            return i + j;
+                        }
+                    }
+                }
             }
-        }
+        

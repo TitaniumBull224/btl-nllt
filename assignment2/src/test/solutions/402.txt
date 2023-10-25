@@ -1,1 +1,0 @@
-Program([ClassDecl(Id(Main),[MethodDecl(Id(@main),[],VoidType,Block([Call(FieldAccess(ArrayCell(Id(Shape),IntLit(0)),Id(length)),Id(getLength),[])]))])])

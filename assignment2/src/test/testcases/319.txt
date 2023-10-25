@@ -1,4 +1,7 @@
-class main {
-            var a:string = t > 5;
-            var b:string = t >= 5;
-        }
+
+            class main {
+                func test():void {
+                    a := new X().b[0].c[1+2];
+                }
+            }
+        

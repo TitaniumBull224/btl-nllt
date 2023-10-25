@@ -1,3 +1,12 @@
-class main {
-            var a:string = Shape.@a;
-        }
+
+            class main {
+                func test():int {
+                    if true {
+                        return 1;
+                    }
+                    else{
+                        return 2;
+                    }
+                }
+            }
+        

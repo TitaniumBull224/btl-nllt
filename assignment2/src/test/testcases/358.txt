@@ -1,5 +1,11 @@
-class main {
-            func test():void{
-                @getArea();
+
+            class main {
+                func constructor() {
+                    if true {
+                        for i := 1; true; i := i + 1 {
+                            return i;
+                        }
+                    }
+                }
             }
-        }
+        

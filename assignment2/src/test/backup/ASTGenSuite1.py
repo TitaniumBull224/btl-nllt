@@ -2432,7 +2432,7 @@ class ASTGenSuite(unittest.TestCase):
     def test_block_if_for(self):
         """More complex program"""
         input = r"""class main {
-            func constructor(){
+            func constructor() {
                 var a:string = "hi";
                 for i:=1;false;j:=true{
                     @t();

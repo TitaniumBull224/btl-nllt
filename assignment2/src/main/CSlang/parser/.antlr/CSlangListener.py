@@ -431,6 +431,15 @@ class CSlangListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by CSlangParser#stmtinvocinst.
+    def enterStmtinvocinst(self, ctx:CSlangParser.StmtinvocinstContext):
+        pass
+
+    # Exit a parse tree produced by CSlangParser#stmtinvocinst.
+    def exitStmtinvocinst(self, ctx:CSlangParser.StmtinvocinstContext):
+        pass
+
+
     # Enter a parse tree produced by CSlangParser#stmtinvocstat.
     def enterStmtinvocstat(self, ctx:CSlangParser.StmtinvocstatContext):
         pass

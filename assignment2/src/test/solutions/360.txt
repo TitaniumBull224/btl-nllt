@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(main),[MethodDecl(Id(test),[],VoidType,Block([Call(Id(@getArea),[CallExpr(Id(Shape),Id(check),[])])]))])])
+Program([ClassDecl(Id(main),[MethodDecl(Id(constructor),[],VoidType,Block([Call(FieldAccess(FieldAccess(Id(@Hologod)),Id(Aqua)),Id(getSub),[])]))])])

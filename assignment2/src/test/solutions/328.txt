@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(main),[AttributeDecl(VarDecl(Id(a),StringType,ArrayCell(Id(a),IntLit(2))))])])
+Program([ClassDecl(Id(main),[MethodDecl(Id(test),[],VoidType,Block([AssignStmt(FieldAccess(Id(Vegi),Id(aqua)),IntLit(445))]))])])

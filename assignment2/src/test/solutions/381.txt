@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(main),[MethodDecl(Id(constructor),[],VoidType,Block([VarDecl(Id(t),IntType,NullLiteral()),VarDecl(Id(a),StringType,Self())]))])])
+Program([ClassDecl(Id(main),[AttributeDecl(VarDecl(Id(hologod),IntType,FieldAccess(CallExpr(Id(io),Id(great),[]),Id(peak))))])])

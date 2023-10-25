@@ -1,5 +1,8 @@
-class main {
-            func test():void{
-                a[2]:= 2;
+
+            class main {
+                func test():void {}
+                func @error():bool {
+                    return false;
+                }
             }
-        }
+        

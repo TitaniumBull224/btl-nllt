@@ -1,3 +1,7 @@
-class main {
-            var a:string = a[2];
-        }
+
+            class main {
+                func test():void {
+                    Vegi.aqua := 445;
+                }
+            }
+        

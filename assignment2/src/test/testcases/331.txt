@@ -1,3 +1,7 @@
-class main {
-            var a:string = a[2].t(1,2);
-        }
+
+            class main {
+                func test():void {
+                    Anime.OP[1] := "Nightmare";
+                }
+            }
+        

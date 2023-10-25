@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(main),[MethodDecl(Id(constructor),[],VoidType,Block([For(AssignStmt(Id(i),IntLit(1)),BooleanLit(False),AssignStmt(Id(i),IntLit(2)),Block([If(BooleanLit(False),Block([Return(BinaryOp(+,Id(i),Id(j)))]))])])]))])])
+Program([ClassDecl(Id(main),[MethodDecl(Id(reverse),[Param(Id(str),StringType)],VoidType,Block([VarDecl(Id(len),IntType,CallExpr(Id(str),Id(length),[])),For(AssignStmt(Id(i),BinaryOp(-,Id(len),IntLit(1))),BinaryOp(>=,Id(i),IntLit(0)),AssignStmt(Id(i),BinaryOp(-,Id(i),IntLit(1))),Block([Call(Id(@print),[ArrayCell(Id(str),Id(i))])])])]))])])

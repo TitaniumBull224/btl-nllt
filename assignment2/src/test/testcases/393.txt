@@ -1,9 +1,15 @@
-class main {
-            func constructor(){
-                for i:=1;false;i:=2{
-                    for j:=1;true;j:=5{
-                        return i+j;
+
+            class main {
+                func isPrime(a:int):bool {
+                    if a < 2 {
+                        return false;
                     }
+                    for i := 2 ; i * i <= a; i := i + 1 {
+                        if a % i == 0 {
+                            return false;
+                        }
+                    }
+                    return true;
                 }
             }
-        }
+        

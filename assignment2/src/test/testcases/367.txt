@@ -1,5 +1,7 @@
-class main {
-            func test():void{
-                value := x.foo(5);
+
+            class main {
+                func constructor() {
+                    var Hologod: bool = a && !b;
+                }
             }
-        }
+        

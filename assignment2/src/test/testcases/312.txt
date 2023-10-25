@@ -1,5 +1,5 @@
-class main {
-            func test():void{
-                return;
+
+            class main {
+                var a,b: [8]int = 2,3;
             }
-        }
+        

@@ -1,8 +1,5 @@
-class main {
-            func constructor(){
-                var a:string = "hi";
-                for i:=1;false;j:=true{
-                    @t();
-                }
+
+            class main {
+                var hologod:int = io.great(a,b).peak()[1];
             }
-        }
+        

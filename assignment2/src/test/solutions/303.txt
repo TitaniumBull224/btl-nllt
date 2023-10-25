@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(main),[AttributeDecl(ConstDecl(Id(a),ArrayType(5,IntType),IntLit(5))),AttributeDecl(ConstDecl(Id(b),ArrayType(5,IntType),IntLit(6)))])])
+Program([ClassDecl(Id(main),[MethodDecl(Id(@main),[],VoidType,Block([Return()]))])])

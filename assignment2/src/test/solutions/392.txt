@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(main),[MethodDecl(Id(constructor),[],VoidType,Block([If(BooleanLit(True),Block([If(BooleanLit(False),Block([Return(IntLit(1))]))]))]))])])
+Program([ClassDecl(Id(main),[MethodDecl(Id(prime),[Param(Id(arr),ArrayType(10,IntType))],VoidType,Block([For(AssignStmt(Id(i),IntLit(0)),BinaryOp(<,Id(i),IntLit(10)),AssignStmt(Id(i),BinaryOp(+,Id(i),IntLit(1))),Block([If(CallExpr(Self(),Id(isPrime),[ArrayCell(Id(arr),Id(i))]),Block([Call(Id(@print),[ArrayCell(Id(arr),Id(i))])]))])])]))])])

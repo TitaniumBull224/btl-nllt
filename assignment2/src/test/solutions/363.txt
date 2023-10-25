@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(main),[MethodDecl(Id(test),[],VoidType,Block([VarDecl(Id(a),ArrayType(6,ClassType(Id(Shape)))),VarDecl(Id(b),ArrayType(6,ClassType(Id(Shape))))]))])])
+Program([ClassDecl(Id(main),[MethodDecl(Id(constructor),[],VoidType,Block([Call(ArrayCell(FieldAccess(ArrayCell(Id(Hologod),IntLit(0)),Id(Aqua)),IntLit(0)),Id(getSub),[])]))])])

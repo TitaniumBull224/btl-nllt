@@ -1,6 +1,7 @@
-class main {
-            func test():void{}
-            func @io():int{
-                return 1;
+
+            class main {
+                func constructor() {
+                    self.Hologod()[1+1].aqua();
+                }
             }
-        }
+        

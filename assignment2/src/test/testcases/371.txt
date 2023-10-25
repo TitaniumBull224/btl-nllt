@@ -1,4 +1,7 @@
-class main {
-            var a:int;
-            var b:string =5;
-        }
+
+            class main {
+                func constructor() {
+                    self.Hologod()[0].aqua();
+                }
+            }
+        

@@ -1,5 +1,7 @@
-class main {
-            func test():void{
-                self.aPI := 3.14;
+
+            class main {
+                func constructor() {
+                    var Hologod: int = 1 + -2;
+                }
             }
-        }
+        

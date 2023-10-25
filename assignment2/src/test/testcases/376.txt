@@ -1,3 +1,5 @@
-class main {
-            func constructor(a:int, b:string){}
-        }
+
+            class main {
+                var hologod:bool = a != b;
+            }
+        

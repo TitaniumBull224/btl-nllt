@@ -1,5 +1,7 @@
-class main {
-            func test():void{
-                x.b[2] := x.m()[3];
+
+            class main {
+                func constructor() {
+                    var Hologod: [1]int;
+                }
             }
-        }
+        

@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(main),[MethodDecl(Id(test),[],VoidType,Block([AssignStmt(ArrayCell(Id(l),IntLit(3)),BinaryOp(*,Id(value),IntLit(2)))]))])])
+Program([ClassDecl(Id(main),[MethodDecl(Id(constructor),[],VoidType,Block([VarDecl(Id(Hologod),StringType,BinaryOp(^,BinaryOp(+,StringLit(a),StringLit(b)),StringLit(c)))]))])])

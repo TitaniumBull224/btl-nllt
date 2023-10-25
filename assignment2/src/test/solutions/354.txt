@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(main),[MethodDecl(Id(test),[],VoidType,Block([Call(Id(Shape),Id(getArea),[])]))])])
+Program([ClassDecl(Id(main),[AttributeDecl(VarDecl(Id(t),IntType,NullLiteral())),MethodDecl(Id(constructor),[],VoidType,Block([VarDecl(Id(a),StringType,FieldAccess(Self(),Id(t)))]))])])
