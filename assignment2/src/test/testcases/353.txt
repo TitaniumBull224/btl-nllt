@@ -1,7 +1,5 @@
-class Main {
-            func @main():void{
-                for i:=1; true; i:=i+1{
-                    a:=2+a;
-                }
+
+            class main {
+                func constructor(a,b:Holo, c,d:Niji) {}
             }
-        }
+        

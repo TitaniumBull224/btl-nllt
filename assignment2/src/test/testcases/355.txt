@@ -1,5 +1,10 @@
-class Main1 {
-            func test1():void{
-                Shape.@getLength(5);
+
+            class main {
+                func constructor() {
+                    var a:string = "nijinigger";
+                    for i := 1; false; i := true || i {
+                        @hologod(a);
+                    }
+                }
             }
-        }
+        

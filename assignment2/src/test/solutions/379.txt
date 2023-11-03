@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(Main),[AttributeDecl(ConstDecl(Id(a),ArrayType(3,BoolType),[BooleanLit(True),BooleanLit(False),BooleanLit(True)])),MethodDecl(Id(main),[],VoidType,Block([]))])])
+Program([ClassDecl(Id(main),[AttributeDecl(VarDecl(Id(hologod),IntType,FieldAccess(Id(io),Id(great))))])])

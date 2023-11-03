@@ -1,5 +1,11 @@
-class Main {
-            func @main():void{
-                Shape.length.getLength();
+
+            class main {
+                func constructor() {
+                    if true {
+                        for i := 1; true; i := i + 1 {
+                            return i;
+                        }
+                    }
+                }
             }
-        }
+        

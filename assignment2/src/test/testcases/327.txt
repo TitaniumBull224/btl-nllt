@@ -1,3 +1,7 @@
-class main {
-            var a:string = !!--a;
-        }
+
+            class main {
+                func test():void {
+                    a := 1;
+                }
+            }
+        

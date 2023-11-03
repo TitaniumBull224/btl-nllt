@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(main),[MethodDecl(Id(test),[],VoidType,Block([If(BooleanLit(True),Block([AssignStmt(Id(a),IntLit(1))]))]))])])
+Program([ClassDecl(Id(main),[MethodDecl(Id(constructor),[Param(Id(a),IntType),Param(Id(b),IntType),Param(Id(c),IntType)],VoidType,Block([]))])])

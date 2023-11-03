@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(main),[AttributeDecl(ConstDecl(Id(a),ClassType(Id(Temp)),NewExpr(Id(Temp),[IntLit(33)]))),MethodDecl(Id(constructor),[],VoidType,Block([VarDecl(Id(b),IntType)])),MethodDecl(Id(constructor),[Param(Id(a),ClassType(Id(Temp)))],VoidType,Block([VarDecl(Id(b),ClassType(Id(Temp)),Id(a))]))])])
+Program([ClassDecl(Id(main),[MethodDecl(Id(test),[],VoidType,Block([For(AssignStmt(Id(i),IntLit(2)),BooleanLit(True),AssignStmt(Id(i),BinaryOp(+,Id(i),IntLit(1))),Block([AssignStmt(Id(a),IntLit(2))])])]))])])

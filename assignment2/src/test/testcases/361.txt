@@ -1,5 +1,7 @@
-class Main {
-            func @main():void{
-                @getArea(2,6);
+
+            class main {
+                func constructor() {
+                    Hologod[0].Aqua.getSub();
+                }
             }
-        }
+        

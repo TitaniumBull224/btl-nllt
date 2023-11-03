@@ -1,6 +1,18 @@
-class main {
-            const a:Temp = new Temp(33);
-            func constructor() {
-                var b: int;
+
+            class Program {
+                var x, y, z: int = -2, 2*4, 5%(6-2) + ab;
+                func @fact(n: int):int {
+                    if {i := 1;} n == 0 { Shape.lst.getSize(); }
+                    else {return n * @fact(n - 1);}
+                }
+                func @inc(n, delta: int):int {
+                    n := n + delta;
+                    return n;
+                }
+                func @main():int {
+                    var delta: int = @fact(3);
+                    @inc(self.x, delta);
+                    io.@writeInt(self.x);
+                }
             }
-        }
+        

@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(Main),[MethodDecl(Id(@main),[],VoidType,Block([If(Block([AssignStmt(Id(i),IntLit(1))]),BinaryOp(>,Id(j),Id(i)),Block([AssignStmt(Id(j),BinaryOp(-,Id(j),IntLit(1)))]))]))])])
+Program([ClassDecl(Id(main),[MethodDecl(Id(constructor),[],VoidType,Block([Call(ArrayCell(CallExpr(Self(),Id(Hologod),[]),IntLit(0)),Id(aqua),[])]))])])

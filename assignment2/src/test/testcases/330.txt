@@ -1,3 +1,7 @@
-class main {
-            var a:string = a.t;
-        }
+
+            class main {
+                func test():void {
+                    Oga[420].Vegi.aqua := 445;
+                }
+            }
+        

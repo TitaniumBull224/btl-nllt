@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(main),[MethodDecl(Id(test),[],VoidType,Block([AssignStmt(FieldAccess(Id(Shape),Id(a)),IntLit(2))]))])])
+Program([ClassDecl(Id(main),[MethodDecl(Id(test),[],VoidType,Block([ConstDecl(Id(n),IntType,IntLit(10)),For(AssignStmt(Id(i),IntLit(0)),BinaryOp(<,Id(i),Id(n)),AssignStmt(Id(i),BinaryOp(+,Id(i),IntLit(1))),Block([Call(Id(io),Id(@print),[Id(i)])])])]))])])

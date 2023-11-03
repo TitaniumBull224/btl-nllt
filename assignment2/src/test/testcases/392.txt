@@ -1,3 +1,11 @@
-class main {
-            const a:int = 6*3 + 2;
-        }
+
+            class main {
+                func prime(arr:[10]int):void {
+                    for i := 0; i < 10; i := i + 1 {
+                        if self.isPrime(arr[i]) {
+                            @print(arr[i]);
+                        }
+                    }
+                }
+            }
+        

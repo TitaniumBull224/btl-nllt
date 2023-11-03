@@ -1,3 +1,5 @@
-class main {
-            const a:[5]Shape = "22";
-        }
+
+            class main {
+                const a, b, c:float = 3.2, 20.5, 45.0;
+            }
+        

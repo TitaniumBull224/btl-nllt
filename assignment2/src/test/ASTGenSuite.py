@@ -3969,3 +3969,49 @@ class ASTGenSuite(unittest.TestCase):
             )
         )
         self.assertTrue(TestAST.test(input, expect, 399))
+
+    def test100(self):
+        input = r"""
+            class main {
+                func test():void{
+                    for i:=2; true; i:=i+1{
+                        a:=2;
+                    }
+                }
+            }
+        """
+        expect = str(
+            Program(
+                [
+                    ClassDecl(
+                        Id("main"),
+                        [
+                            MethodDecl(
+                                Id("test"),
+                                [],
+                                VoidType(),
+                                Block(
+                                    [
+                                        For(
+                                            Assign(Id("i"), IntLiteral(2)),
+                                            BooleanLiteral(True),
+                                            Assign(
+                                                Id("i"),
+                                                BinaryOp("+", Id("i"), IntLiteral(1)),
+                                            ),
+                                            Block(
+                                                [
+                                                    Assign(Id("a"), IntLiteral(2)),
+                                                ]
+                                            ),
+                                        )
+                                    ]
+                                ),
+                            )
+                        ],
+                    )
+                ]
+            )
+        )
+        expected = r"""Program([ClassDecl(Id(main),[MethodDecl(Id(test),[],VoidType,Block([For(AssignStmt(Id(i),IntLit(2)),BooleanLit(True),AssignStmt(Id(i),BinaryOp(+,Id(i),IntLit(1))),Block([AssignStmt(Id(a),IntLit(2))])])]))])])"""
+        self.assertTrue(TestAST.test(input, expected, 400))

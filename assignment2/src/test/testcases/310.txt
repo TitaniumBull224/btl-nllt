@@ -1,3 +1,12 @@
-class main {
-            const a:Shape = "22";
-        }
+
+            class main {
+                func @main(a:int,b:float):void{
+                    if a > b {
+                        return a;
+                    }
+                    else {
+                        return b;
+                    }
+                }
+            }
+        

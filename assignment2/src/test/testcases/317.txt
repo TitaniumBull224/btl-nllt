@@ -1,3 +1,5 @@
-class main {
-            var a:string = t != 6;
-        }
+
+            class main {
+                var a:float = 25.15e-1;
+            }
+        

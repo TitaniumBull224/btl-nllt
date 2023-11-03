@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(main),[AttributeDecl(VarDecl(Id(c),IntType)),AttributeDecl(VarDecl(Id(d),IntType)),MethodDecl(Id(constructor),[Param(Id(a),IntType),Param(Id(b),StringType)],VoidType,Block([AssignStmt(FieldAccess(Self(),Id(c)),Id(a)),AssignStmt(FieldAccess(Self(),Id(d)),NullLiteral())]))])])
+Program([ClassDecl(Id(main),[AttributeDecl(VarDecl(Id(hologod),BoolType,BinaryOp(&&,UnaryOp(!,Id(a)),Id(b))))])])

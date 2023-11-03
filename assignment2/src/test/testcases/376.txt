@@ -1,6 +1,5 @@
-class main {
-            func test1():void{}
-            func test2():int{
-                return 10;
+
+            class main {
+                var hologod:bool = a != b;
             }
-        }
+        

@@ -1,3 +1,5 @@
-class main {
-            func constructor(ax,bg:float, c:ShapeS){}
-        }
+
+            class main {
+                var hologod:int = io.great(a,b).peak()[1];
+            }
+        

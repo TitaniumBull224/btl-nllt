@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(main),[MethodDecl(Id(constructor),[],VoidType,Block([For(AssignStmt(Id(i),IntLit(1)),BooleanLit(False),AssignStmt(Id(i),IntLit(3)),Block([For(AssignStmt(Id(j),IntLit(1)),BooleanLit(True),AssignStmt(Id(j),IntLit(4)),Block([Return(BinaryOp(%,Id(j),IntLit(3)))])])])])]))])])
+Program([ClassDecl(Id(main),[AttributeDecl(VarDecl(Id(hologod),StringType,BinaryOp(+,BinaryOp(^,StringLit(onion),StringLit(Aqua)),StringLit(=pred))))])])

@@ -1,3 +1,9 @@
-class main {
-            const a:int = (2+3)*90+(60- -3);
-        }
+
+            class main {
+                func reverse(arr:[5]string):void {
+                    for i := 4; i >= 0; i := i - 1 {
+                        @print(arr[i]);
+                    }
+                }
+            }
+        

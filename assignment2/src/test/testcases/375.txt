@@ -1,8 +1,5 @@
-class Main {
-            func @main():void{
-                for j := 0; j < 10; j := j + 1 {
-                    io.@writeInt(j);
-                    if j == 3 {break;}
-                }
+
+            class main {
+                var hologod:bool = !false;
             }
-        }
+        

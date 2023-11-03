@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(main),[AttributeDecl(ConstDecl(Id(a),ArrayType(5,ClassType(Id(Shape))),StringLit(22)))])])
+Program([ClassDecl(Id(main),[AttributeDecl(ConstDecl(Id(a),FloatType,FloatLit(3.2))),AttributeDecl(ConstDecl(Id(b),FloatType,FloatLit(20.5))),AttributeDecl(ConstDecl(Id(c),FloatType,FloatLit(45.0)))])])

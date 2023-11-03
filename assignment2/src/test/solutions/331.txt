@@ -1,1 +1,1 @@
-Program([ClassDecl(Id(main),[AttributeDecl(VarDecl(Id(a),StringType,CallExpr(ArrayCell(Id(a),IntLit(2)),Id(t),[IntLit(1),IntLit(2)])))])])
+Program([ClassDecl(Id(main),[MethodDecl(Id(test),[],VoidType,Block([AssignStmt(ArrayCell(FieldAccess(Id(Anime),Id(OP)),IntLit(1)),StringLit(Nightmare))]))])])

@@ -1,5 +1,8 @@
-class Main1 {
-            func test1():void{
-                Shape.@getLength();
+
+            class main {
+                var t:int = null;
+                func constructor() {
+                    var a:string = self.t;
+                }
             }
-        }
+        

@@ -1,4 +1,5 @@
-class main {
-            func constructor(a:int, name:string){}
-            func constructor(){}
-        }
+
+            class main {
+                var hologod:int = io.great().peak;
+            }
+        

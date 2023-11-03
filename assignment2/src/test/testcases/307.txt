@@ -1,4 +1,14 @@
-class main {
-            func @test():Shape{
+
+            class main {
+                var a:int;
+                const b:int = 5;
             }
-        }
+            class Secondary {
+                func @main():void{
+                    return;
+                }
+                func constructor(){
+                    return;
+                }
+            }
+        

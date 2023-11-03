@@ -1,9 +1,9 @@
-class main {
-            const a:Temp = new Temp(33);
-            func constructor() {
-                var b: int;
+
+            class main {
+                func test():void{
+                    for i:=2; true; i:=i+1{
+                        a:=2;
+                    }
+                }
             }
-            func constructor(a: Temp) {
-                var b: Temp = a;
-            }
-        }
+        

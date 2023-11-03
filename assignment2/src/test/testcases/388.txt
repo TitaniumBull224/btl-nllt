@@ -1,9 +1,5 @@
-class main {
-            func constructor(){
-                for i:=1;false;i:=3{
-                    for j:=1;true;j:=4{
-                        return j%3;
-                    }
-                }
+
+            class main {
+                var hologod:string = ("onion" ^ "Aqua") + "=pred";
             }
-        }
+        

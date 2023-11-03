@@ -1,4 +1,5 @@
-class Main {
-            const a:[3]bool = [true,false,true];
-            func main():void{}
-        }
+
+            class main {
+                var hologod:int = io.great;
+            }
+        

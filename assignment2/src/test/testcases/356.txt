@@ -1,5 +1,9 @@
-class Main1 {
-            func test1():void{
-                Shape.@getLength(Shape.getIndex());
+
+            class main {
+                func constructor() {
+                    for i := 1; true; i := i + 1 {
+                        return @hologod(a);
+                    }
+                }
             }
-        }
+        

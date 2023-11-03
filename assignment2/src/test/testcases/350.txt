@@ -1,7 +1,5 @@
-class main {
-            func test():void{
-                if true {
-                    a:=1;
-                }
+
+            class main {
+                func constructor(a,b,c: int) {}
             }
-        }
+        
