@@ -1,9 +1,0 @@
-
-            class main {
-                func test():void {
-                    for i := 0; true; i := i + 1 {
-                        a := a + 2;
-                    }
-                }
-            }
-        

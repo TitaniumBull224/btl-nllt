@@ -1,7 +1,0 @@
-
-            class main {
-                func test():void {
-                    @Aquapex.getLP(gain.graph());
-                }
-            }
-        

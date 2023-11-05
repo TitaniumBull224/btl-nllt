@@ -1,1 +1,0 @@
-Program([ClassDecl(Id(main),[AttributeDecl(ConstDecl(Id(a),StringType,ArrayCell(FieldAccess(Self(),Id(lst)),IntLit(5))))])])

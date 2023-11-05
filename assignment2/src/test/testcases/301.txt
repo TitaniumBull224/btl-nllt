@@ -1,5 +1,0 @@
-
-            class main {
-                var a:int;
-            }
-        

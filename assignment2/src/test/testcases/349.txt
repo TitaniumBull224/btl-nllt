@@ -1,6 +1,0 @@
-
-            class main {
-                const a:Anime = new Anime(44.5);
-                func test():void{}
-            }
-        

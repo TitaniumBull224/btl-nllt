@@ -1,7 +1,0 @@
-
-            class main {
-                func test():void {
-                    Anime.OP[1] := "Nightmare";
-                }
-            }
-        

@@ -1,5 +1,0 @@
-
-            class main {
-                func constructor(a,b:Holo, c,d:Niji) {}
-            }
-        

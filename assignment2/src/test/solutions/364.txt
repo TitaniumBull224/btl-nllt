@@ -1,1 +1,0 @@
-Program([ClassDecl(Id(main),[MethodDecl(Id(constructor),[],VoidType,Block([AssignStmt(ArrayCell(Id(Hologod),IntLit(0)),ArrayCell(Id(a),IntLit(0)))]))])])

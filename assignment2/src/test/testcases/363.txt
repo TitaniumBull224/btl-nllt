@@ -1,7 +1,0 @@
-
-            class main {
-                func constructor() {
-                    Hologod[0].Aqua[0].getSub();
-                }
-            }
-        

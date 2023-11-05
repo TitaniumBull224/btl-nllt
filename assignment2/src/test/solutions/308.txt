@@ -1,1 +1,0 @@
-Program([ClassDecl(Id(Child),Id(Parent),[AttributeDecl(VarDecl(Id(a),IntType)),AttributeDecl(ConstDecl(Id(b),IntType,IntLit(5)))])])

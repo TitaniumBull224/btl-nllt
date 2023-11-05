@@ -1,5 +1,0 @@
-
-            class main {
-                var hologod:string = ("onion" ^ "Aqua") + "=pred";
-            }
-        

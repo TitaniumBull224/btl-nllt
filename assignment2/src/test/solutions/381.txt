@@ -1,1 +1,0 @@
-Program([ClassDecl(Id(main),[AttributeDecl(VarDecl(Id(hologod),IntType,FieldAccess(CallExpr(Id(io),Id(great),[]),Id(peak))))])])

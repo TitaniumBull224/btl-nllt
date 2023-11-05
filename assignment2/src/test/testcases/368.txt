@@ -1,7 +1,0 @@
-
-            class main {
-                func constructor() {
-                    var Hologod: string = "a" + "b" ^ "c";
-                }
-            }
-        

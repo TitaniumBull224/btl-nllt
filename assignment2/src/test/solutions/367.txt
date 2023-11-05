@@ -1,1 +1,0 @@
-Program([ClassDecl(Id(main),[MethodDecl(Id(constructor),[],VoidType,Block([VarDecl(Id(Hologod),BoolType,BinaryOp(&&,Id(a),UnaryOp(!,Id(b))))]))])])

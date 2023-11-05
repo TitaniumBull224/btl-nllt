@@ -1,7 +1,0 @@
-
-            class main {
-                func constructor() {
-                    self.Hologod()[@len(a)].aqua();
-                }
-            }
-        

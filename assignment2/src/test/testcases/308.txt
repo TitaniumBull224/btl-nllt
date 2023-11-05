@@ -1,6 +1,0 @@
-
-            class Parent <- Child {
-                var a:int;
-                const b:int = 5;
-            }
-        

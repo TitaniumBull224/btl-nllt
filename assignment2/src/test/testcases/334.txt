@@ -1,9 +1,0 @@
-
-            class main {
-                func test():void {
-                    if {t := 2;} true {
-                        a := 1;
-                    }
-                }
-            }
-        

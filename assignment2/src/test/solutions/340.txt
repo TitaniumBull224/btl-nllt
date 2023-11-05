@@ -1,1 +1,0 @@
-Program([ClassDecl(Id(main),[MethodDecl(Id(test),[],VoidType,Block([Call(FieldAccess(Id(@Aquapex)),Id(getLP),[CallExpr(Id(gain),Id(graph),[])])]))])])

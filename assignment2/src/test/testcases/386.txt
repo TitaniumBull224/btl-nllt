@@ -1,5 +1,0 @@
-
-            class main {
-                var hologod:bool = !(a && b);
-            }
-        

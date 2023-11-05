@@ -1,5 +1,0 @@
-
-            class main {
-                func constructor(a,b: int, c: float) {}
-            }
-        

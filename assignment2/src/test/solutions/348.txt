@@ -1,1 +1,0 @@
-Program([ClassDecl(Id(main),[MethodDecl(Id(test),[],VoidType,Block([])),MethodDecl(Id(@error),[],BoolType,Block([Return(BooleanLit(False))]))])])

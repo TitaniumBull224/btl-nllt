@@ -1,5 +1,0 @@
-
-            class main {
-                var hologod:[3]int = [a, 1, a1];
-            }
-        

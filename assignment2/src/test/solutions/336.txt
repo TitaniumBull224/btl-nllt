@@ -1,1 +1,0 @@
-Program([ClassDecl(Id(main),[MethodDecl(Id(test),[],VoidType,Block([Call(Id(Aquapex),Id(getLP),[])]))])])

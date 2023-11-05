@@ -1,1 +1,0 @@
-Program([ClassDecl(Id(main),[AttributeDecl(ConstDecl(Id(a),ClassType(Id(Anime)),NewExpr(Id(Anime),[FloatLit(44.5)]))),MethodDecl(Id(test),[],VoidType,Block([]))])])

@@ -1,1 +1,0 @@
-Program([ClassDecl(Id(main),[AttributeDecl(VarDecl(Id(hologod),BoolType,BinaryOp(&&,UnaryOp(!,Id(a)),Id(b))))])])

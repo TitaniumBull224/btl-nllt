@@ -1,7 +1,0 @@
-
-            class main {
-                func test():void {
-                    aqua.legend[0] := aqua.weapon()[1] + aqua.skill[2].getLvl();
-                }
-            }
-        

@@ -1,1 +1,0 @@
-Program([ClassDecl(Id(main),[MethodDecl(Id(test),[],VoidType,Block([AssignStmt(ArrayCell(FieldAccess(Id(aqua),Id(legend)),IntLit(0)),BinaryOp(+,ArrayCell(CallExpr(Id(aqua),Id(weapon),[]),IntLit(1)),CallExpr(ArrayCell(FieldAccess(Id(aqua),Id(skill)),IntLit(2)),Id(getLvl),[])))]))])])

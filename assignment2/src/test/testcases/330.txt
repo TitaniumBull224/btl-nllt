@@ -1,7 +1,0 @@
-
-            class main {
-                func test():void {
-                    Oga[420].Vegi.aqua := 445;
-                }
-            }
-        

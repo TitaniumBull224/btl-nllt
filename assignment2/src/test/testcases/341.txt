@@ -1,7 +1,0 @@
-
-            class main {
-                func test():void {
-                    const a, b: int = 420, 69;
-                }
-            }
-        

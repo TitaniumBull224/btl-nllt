@@ -1,1 +1,0 @@
-Program([ClassDecl(Id(main),[MethodDecl(Id(constructor),[],VoidType,Block([Call(CallExpr(Self(),Id(Hologod),[]),Id(aqua),[])]))])])

@@ -1,6 +1,0 @@
-
-            class main {
-                var a:int;
-                const b:int = 5;
-            }
-        

@@ -1,1 +1,0 @@
-Program([ClassDecl(Id(main),[MethodDecl(Id(test),[],VoidType,Block([If(Block([AssignStmt(Id(t),IntLit(2))]),BooleanLit(True),Block([AssignStmt(Id(a),IntLit(1))]))]))])])

@@ -1,1 +1,0 @@
-Program([ClassDecl(Id(main),[MethodDecl(Id(test),[],VoidType,Block([AssignStmt(FieldAccess(FieldAccess(Id(Oga),Id(Vegi)),Id(aqua)),IntLit(445))]))])])

@@ -1,8 +1,0 @@
-
-            class main {
-                func test():void {}
-                func @error():bool {
-                    return false;
-                }
-            }
-        

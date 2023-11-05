@@ -1,1 +1,0 @@
-Program([ClassDecl(Id(main),[AttributeDecl(VarDecl(Id(hologod),ArrayType(3,IntType),[Id(a),IntLit(1),Id(a1)]))])])

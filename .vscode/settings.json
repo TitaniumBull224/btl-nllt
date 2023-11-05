@@ -4,9 +4,11 @@
   },
   "python.formatting.provider": "none",
   "python.analysis.extraPaths": [
-    "./assignment1/src/main/CSlang/parser",
-    "./assignment1/src/test",
+    "./assignment1/src/main/CSlang/utils",
+    "./assignment1/target",
     "./assignment2/src/main/CSlang/utils",
-    "./assignment2/target"
+    "./assignment2/target",
+    "./assignment3/src/main/CSlang/utils",
+    "./assignment3/target"
   ]
 }

@@ -1,1 +1,0 @@
-Program([ClassDecl(Id(main),[AttributeDecl(VarDecl(Id(t),IntType,NullLiteral())),MethodDecl(Id(constructor),[],VoidType,Block([VarDecl(Id(a),StringType,FieldAccess(Self(),Id(t)))]))])])

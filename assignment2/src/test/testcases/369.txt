@@ -1,7 +1,0 @@
-
-            class main {
-                func constructor() {
-                    var Hologod: float = 1 - 2 / 3;
-                }
-            }
-        

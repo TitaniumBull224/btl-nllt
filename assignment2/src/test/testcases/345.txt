@@ -1,7 +1,0 @@
-
-            class main {
-                func test():void {
-                    if {x := 0;} y > x {y := y - 1;} else {y := y + 1;}
-                }
-            }
-        

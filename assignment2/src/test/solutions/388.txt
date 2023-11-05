@@ -1,1 +1,0 @@
-Program([ClassDecl(Id(main),[AttributeDecl(VarDecl(Id(hologod),StringType,BinaryOp(+,BinaryOp(^,StringLit(onion),StringLit(Aqua)),StringLit(=pred))))])])
