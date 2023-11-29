@@ -1,0 +1,7 @@
+
+            class Program {
+                var a: int = 1;
+                func a(): int {}
+                func @main(): void {}
+            }
+        

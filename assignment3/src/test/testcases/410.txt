@@ -1,0 +1,10 @@
+
+            class a {
+                var b: int = 1;
+            }
+            class a <- Program {
+                func @main(): void {}
+                var b, c: float = 1.1, 1.2;
+                const c: bool = true;
+            }
+        

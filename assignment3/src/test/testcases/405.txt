@@ -1,0 +1,7 @@
+
+            class Program {
+                var a: int = 1;
+                const a: float = 1.0;
+                func @main(): void {}
+            }
+        

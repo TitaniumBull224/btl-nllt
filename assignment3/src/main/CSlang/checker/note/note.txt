@@ -1,0 +1,105 @@
+class Note():
+    def visitProgram(self, ast: Program, o: object):
+        return None
+
+    def visitVarDecl(self, ast: VarDecl, o: object):
+        return None
+
+    def visitConstDecl(self, ast: ConstDecl, o: object):
+        return None
+
+    def visitClassDecl(self, ast: ClassDecl, o: object):
+        return None
+
+    def visitMethodDecl(self, ast: MethodDecl, o: object):
+        return None
+
+    def visitAttributeDecl(self, ast: AttributeDecl, o: object):
+        return None
+
+    def visitIntType(self, ast: IntType, o: object):
+        return None
+
+    def visitFloatType(self, ast: FloatType, o: object):
+        return None
+
+    def visitBoolType(self, ast: BoolType, o: object):
+        return None
+
+    def visitStringType(self, ast: StringType, o: object):
+        return None
+
+    def visitVoidType(self, ast: VoidType, o: object):
+        return None
+
+    def visitArrayType(self, ast: ArrayType, o: object):
+        return None
+
+    def visitClassType(self, ast: ClassType, o: object):
+        return None
+
+    def visitBinaryOp(self, ast: BinaryOp, o: object):
+        return None
+
+    def visitUnaryOp(self, ast: UnaryOp, o: object):
+        return None
+
+    def visitCallExpr(self, ast: CallExpr, o: object):
+        return None
+
+    def visitNewExpr(self, ast: NewExpr, o: object):
+        return None
+
+    def visitId(self, ast: Id, o: object):
+        return None
+
+    def visitArrayCell(self, ast: ArrayCell, o: object):
+        return None
+
+    def visitFieldAccess(self, ast: FieldAccess, o: object):
+        return None
+
+    def visitBlock(self, ast: Block, o: object):
+        return None
+
+    def visitIf(self, ast: If, o: object):
+        return None
+
+    def visitFor(self, ast: For, o: object):
+        return None
+
+    def visitContinue(self, ast: Continue, o: object):
+        return None
+
+    def visitBreak(self, ast: Break, o: object):
+        return None
+
+    def visitReturn(self, ast: Return, o: object):
+        return None
+
+    def visitAssign(self, ast: Assign, o: object):
+        return None
+
+    def visitCallStmt(self, ast: CallStmt, o: object):
+        return None
+
+    def visitIntLiteral(self, ast: IntLiteral, o: object):
+        return None
+
+    def visitFloatLiteral(self, ast: FloatLiteral, o: object):
+        return None
+
+    def visitBooleanLiteral(self, ast: BooleanLiteral, o: object):
+        return None
+
+    def visitStringLiteral(self, ast: StringLiteral, o: object):
+        return None
+
+    def visitNullLiteral(self, ast: NullLiteral, o: object):
+        return None
+
+    def visitSelfLiteral(self, ast: SelfLiteral, o: object):
+        return None
+
+    def visitArrayLiteral(self, ast: ArrayLiteral, o: object):
+        return None

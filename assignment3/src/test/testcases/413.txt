@@ -1,0 +1,8 @@
+
+            class Program {
+                func @main(): void {}
+                func constructor(a: float) {}
+                func constructor(b: float) {}
+                func @main(): void {}
+            }
+        
