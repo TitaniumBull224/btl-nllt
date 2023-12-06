@@ -24,11 +24,11 @@ Parser rules
 	constdecl: CONST (attlistdecl | attlistnodecl);
 	attlistdecl: identifier CM attlistdecl CM exprstr | identifier COL atttyp DECLARE exprstr;
 	attlistnodecl: identifier CM attlistnodecl | identifier COL atttyp;
-	atttyp: (LBK INTLIT RBK)? typ;
+	atttyp: (LBK INTLIT RBK)? typ | VOID;
 	typ: INT | FLOAT | BOOL | STRING | ID;
 // Method declaration
 	method
-		: FUNC identifier LPN paramlist? RPN COL (atttyp | VOID) blockstmt 
+		: FUNC identifier LPN paramlist? RPN COL atttyp blockstmt 
 		| FUNC CONSTRUCTOR LPN paramlist? RPN blockstmt
 		;
 	paramlist: params CM paramlist | params;

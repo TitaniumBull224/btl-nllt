@@ -1,7 +1,0 @@
-
-            class Program {
-                func @main(): void {}
-                func a(b: int): int {}
-                func a(c: float): float {}
-            }
-        

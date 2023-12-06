@@ -1,9 +1,0 @@
-
-            class Program {
-                func @main(): void {}
-            }
-            class Program <- a {
-                func @main(): void {}
-                var a, @main: int = 1, 2; 
-            }
-        

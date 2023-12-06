@@ -1,8 +1,0 @@
-
-            class Program {
-                func @main(): void {}
-                func hololive(member: string): int {}
-                var member: int;
-                const hololive: float;
-            }
-        

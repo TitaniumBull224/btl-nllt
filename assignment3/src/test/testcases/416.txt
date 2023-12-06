@@ -1,8 +1,0 @@
-
-            class b {
-                func @main(): void {}
-            }
-            class a {
-                func @main(): void {}
-            }
-        

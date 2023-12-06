@@ -1,7 +1,0 @@
-
-            class Program {
-                func @main(): void {}
-            }
-            class a {}
-            class a <- a {}
-        

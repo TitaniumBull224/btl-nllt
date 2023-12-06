@@ -74,11 +74,12 @@ class ASTGeneration(CSlangVisitor):
         return [(id, typ, None) for id in ids]
 
     def visitAtttyp(self, ctx: CSlangParser.AtttypContext):
-        return (
-            ArrayType(int(ctx.INTLIT().getText()), self.visit(ctx.typ()))
-            if ctx.INTLIT()
-            else self.visit(ctx.typ())
-        )
+        if ctx.VOID():
+            return VoidType()
+        elif ctx.INTLIT():
+            return ArrayType(int(ctx.INTLIT().getText()), self.visit(ctx.typ()))
+        else:
+            return self.visit(ctx.typ())
 
     def visitTyp(self, ctx: CSlangParser.TypContext):
         if ctx.INT():
